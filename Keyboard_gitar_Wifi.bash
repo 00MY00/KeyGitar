@@ -29,39 +29,42 @@ sudo ifconfig eth0 up
 
 
 
-interface wlan0 > "/etc/dhcpcd.conf"
-static ip_address=192.168.0.1/24 >> "/etc/dhcpcd.conf"
-nohook wpa_supplicant >> "/etc/dhcpcd.conf"
+echo "interface wlan0" > "/etc/dhcpcd.conf"
+echo "static ip_address=192.168.0.1/24" >> "/etc/dhcpcd.conf"
+echo "nohook wpa_supplicant" >> "/etc/dhcpcd.conf"
 
 sudo rfkill unblock 0
 
 
 sudo apt-get install dnsmasq -y
 sudo apt-get install hostapd -y
+echo "######################################" > "/etc/dnsmasq.conf"
 ######################################
 # changement dans le fichier de configuration "/etc/dnsmasq.conf" 
-# On utilise l'interface wifi wlan0
-interface=wlan0
-#On définit une plage d'adresse ip ainsi que la durée du bail
-dhcp-range=192.168.0.1,192.168.0.100,255.255.255.0,24h 
+echo "# On utilise l'interface wifi wlan0" >> "/etc/dnsmasq.conf"
+echo "interface=wlan0" >> "/etc/dnsmasq.conf"
+echo "#On définit une plage d'adresse ip ainsi que la durée du bail" >> "/etc/dnsmasq.conf"
+echo "dhcp-range=192.168.0.1,192.168.0.100,255.255.255.0,24h" >> "/etc/dnsmasq.conf"
 
 
 ######################################
+echo "######################################" > "/etc/hostapd/hostapd.conf"
 # Config de hostapd dans "/etc/hostapd/hostapd.conf"
-# interface wlan du Wi-Fi
-interface=wlan0
+echo "# interface wlan du Wi-Fi" >> "/etc/hostapd/hostapd.conf"
+echo "interface=wlan0" >> "/etc/hostapd/hostapd.conf"
 
-# nl80211 avec tous les drivers Linux mac80211 
-driver=nl80211
+echo "# nl80211 avec tous les drivers Linux mac80211" >> "/etc/hostapd/hostapd.conf" 
+echo "driver=nl80211" >> "/etc/hostapd/hostapd.conf"
 
-# Nom du réseau Wi-Fi
-ssid=KeyboardGitar
+echo "# Nom du réseau Wi-Fi" >> "/etc/hostapd/hostapd.conf"
+echo "ssid=KeyboardGitar" >> "/etc/hostapd/hostapd.conf"
 
-# mode Wi-Fi utilisé : a = IEEE 802.11a (5GHz) , b = IEEE 802.11b (2.4GHz), g = IEEE 802.11g) (2.4GHz)
-hw_mode=g
+echo "# mode Wi-Fi utilisé : a = IEEE 802.11a (5GHz) , b = IEEE 802.11b (2.4GHz), g = IEEE 802.11g) (2.4GHz)" >> "/etc/hostapd/hostapd.conf"
+echo "hw_mode=g" >> "/etc/hostapd/hostapd.conf"
 
-# canal de fréquence Wi-Fi (1-14)
-channel=6
+echo "# canal de fréquence Wi-Fi (1-14)" >> "/etc/hostapd/hostapd.conf"
+echo "channel=6" >> "/etc/hostapd/hostapd.conf"
+echo "###############################" >> "/etc/hostapd/hostapd.conf"
 
 #################################
 
