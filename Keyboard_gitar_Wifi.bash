@@ -8,6 +8,7 @@ ping www.google.ch -c 1
 if [ $? -eq 0 ];
 then
     echo -e "OK ping réusit !"
+    apt install net-tools
     sudo ifconfig eth0 down
 fi
 
