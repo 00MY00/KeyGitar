@@ -213,7 +213,7 @@ Ritme_062 = Rassine + "/Ritme/WarmFuzz_120_C_101_SP03.mp3"
 
 
 
-
+print("Exemple :", Ritme_008)
 wave_obj = sa.WaveObject.from_wave_file(Ritme_008)
 play_obj = wave_obj.play()
 play_obj.wait_done()
