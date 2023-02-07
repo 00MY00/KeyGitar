@@ -24,7 +24,7 @@ else
     echo -e "   [ \033[31mERREUR\033[00m ] Installation de PIP !"
 fi
 
-python3 -m ensurepip --upgrade > /dev/null 2>&1
+python3 -m pip install --upgrade pip > /dev/null 2>&1
 if [ $? -eq 0 ];
 then
     echo -e "   [ \033[32mOK\033[00m ] Mise à jour de PIP !"
