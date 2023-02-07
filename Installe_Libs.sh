@@ -1,9 +1,11 @@
 apt update -y && apt upgrade -y
 python3 get-pip.py
 python3 -m ensurepip --upgrade
+apt install python3-pip -y
 pip install keyboard
 # Temporaire
 pip install pygame --pre
+############
 pip install pydub
 pip install ffmpeg --use-pep517
 apt install ffmpeg -y
