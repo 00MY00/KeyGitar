@@ -10,7 +10,8 @@ apt install ffmpeg -y
 if [ $? -eq 0 ];
 then
     echo -e "\033[32m[ OK ] Installation términée !\033[00m"
-
+fi
 
 python3 PlaySond_PyDub.py
 
+exit
