@@ -48,6 +48,7 @@ except ImportError:
 ################################
 
 from pydub import AudioSegment
+import simpleaudio as sa
 # os.environ["FFMPEG_BINARY"] = "C:\Users\\alecc\AppData\Local\Programs\Python\Python311\Lib\site-packages\\ffmpeg"
 
 
@@ -215,8 +216,11 @@ Ritme_062 = Rassine + "/Ritme/WarmFuzz_120_C_101_SP03.mp3"
 
 
 audio = AudioSegment.from_file(Ritme_008)
+temp_file = "Ritme_008"
+sound.export(temp_file, format="mp3")
 
-
+wave_obj = sa.WaveObject.from_wave_file(temp_file)
+play_obj = wave_obj.play()
 
 
 
