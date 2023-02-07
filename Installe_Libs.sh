@@ -1,5 +1,7 @@
 clear
 echo -e "\033[33m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\033[00m"
+echo -e "\033[32m      Installation des packets"
+echo -e "\033[33m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\033[00m"
 apt update -yq > /dev/null 2>&1
 if [ $? -eq 0 ];
 then
