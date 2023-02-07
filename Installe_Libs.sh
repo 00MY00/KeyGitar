@@ -1,6 +1,6 @@
 apt update -y && apt upgrade -y
-python get-pip.py
-python -m ensurepip --upgrade
+python3 get-pip.py
+python3 -m ensurepip --upgrade
 pip install keyboard
 # Temporaire
 pip install pygame --pre
