@@ -12,6 +12,7 @@ pip install ffmpeg --use-pep517
 apt install ffmpeg -y
 # Pour jouer son
 pip install numpy
+apt install libasound2-dev -y
 pip install simpleaudio
 ############
 
