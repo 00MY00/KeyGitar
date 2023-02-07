@@ -1,7 +1,7 @@
 clear
 echo -e "\033[33m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\033[00m"
 apt update -yq
-if [ $? -eq 0 ]:
+if [ $? -eq 0 ];
 then
     echo -e "   [ \033[32mOK\033[00m ] Update fait !"
 else 
@@ -9,7 +9,7 @@ else
 fi
 
 apt upgrade -yq
-if [ $? -eq 0 ]:
+if [ $? -eq 0 ];
 then
     echo -e "   [ \033[32mOK\033[00m ] Upgrade fait !"
 else 
@@ -17,7 +17,7 @@ else
 fi
 
 apt install python3-pip -yq
-if [ $? -eq 0 ]:
+if [ $? -eq 0 ];
 then
     echo -e "   [ \033[32mOK\033[00m ] Installation de PIP !"
 else 
@@ -25,7 +25,7 @@ else
 fi
 
 python3 -m ensurepip --upgrade > /dev/null 2>&1
-if [ $? -eq 0 ]:
+if [ $? -eq 0 ];
 then
     echo -e "   [ \033[32mOK\033[00m ] Mise à jour de PIP !"
 else 
@@ -33,7 +33,7 @@ else
 fi
 
 pip install keyboard --quiet
-if [ $? -eq 0 ]:
+if [ $? -eq 0 ];
 then
     echo -e "   [ \033[32mOK\033[00m ] Installation du Module keyboard !"
 else 
@@ -45,7 +45,7 @@ fi
 ############
 # Retouche de fichier audio
 pip install pydub --quiet
-if [ $? -eq 0 ]:
+if [ $? -eq 0 ];
 then
     echo -e "   [ \033[32mOK\033[00m ] Installation du Module pydub !"
 else 
@@ -53,7 +53,7 @@ else
 fi
 
 pip install ffmpeg --use-pep517 --quiet
-if [ $? -eq 0 ]:
+if [ $? -eq 0 ];
 then
     echo -e "   [ \033[32mOK\033[00m ] Installation du Module ffmpeg !"
 else 
@@ -61,7 +61,7 @@ else
 fi
 
 apt install ffmpeg -yq
-if [ $? -eq 0 ]:
+if [ $? -eq 0 ];
 then
     echo -e "   [ \033[32mOK\033[00m ] Installation de ffmpeg !"
 else 
@@ -70,7 +70,7 @@ fi
 
 # Pour jouer son
 pip install numpy --quiet
-if [ $? -eq 0 ]:
+if [ $? -eq 0 ];
 then
     echo -e "   [ \033[32mOK\033[00m ] Installation du Module numpy !"
 else 
@@ -78,7 +78,7 @@ else
 fi
 
 apt install libasound2-dev -yq
-if [ $? -eq 0 ]:
+if [ $? -eq 0 ];
 then
     echo -e "   [ \033[32mOK\033[00m ] Installation de libasound2-dev !"
 else 
@@ -86,7 +86,7 @@ else
 fi
 
 pip install simpleaudio --quiet
-if [ $? -eq 0 ]:
+if [ $? -eq 0 ];
 then
     echo -e "   [ \033[32mOK\033[00m ] Installation du Module simpleaudio !"
     echo -e "\033[32m[ OK ] Installation términée !\033[00m"
@@ -99,5 +99,5 @@ fi
 echo -e "\033[33m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\033[00m"
 
 echo -e "\033[35mpython3 PlaySond_PyDub.py \033[00m"
-python3 PlaySond_PyDub.py
+
 exit
