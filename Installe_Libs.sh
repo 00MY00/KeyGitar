@@ -8,7 +8,7 @@ else
     echo -e "   [ \033[31mERREUR\033[00m ] Update !"
 fi
 
-apt upgrade -y
+apt upgrade -yq
 if [ $? -eq 0 ]:
 then
     echo -e "   [ \033[32mOK\033[00m ] Upgrade fait !"
@@ -16,7 +16,7 @@ else
     echo -e "   [ \033[31mERREUR\033[00m ] Upgrade !"
 fi
 
-apt install python3-pip -y
+apt install python3-pip -yq
 if [ $? -eq 0 ]:
 then
     echo -e "   [ \033[32mOK\033[00m ] Installation de PIP !"
@@ -24,7 +24,7 @@ else
     echo -e "   [ \033[31mERREUR\033[00m ] Installation de PIP !"
 fi
 
-python3 -m ensurepip --upgrade
+python3 -m ensurepip --upgrade > /dev/null 2>&1
 if [ $? -eq 0 ]:
 then
     echo -e "   [ \033[32mOK\033[00m ] Mise à jour de PIP !"
@@ -32,7 +32,7 @@ else
     echo -e "   [ \033[31mERREUR\033[00m ] Mise à jour de PIP !"
 fi
 
-pip install keyboard
+pip install keyboard --quiet
 if [ $? -eq 0 ]:
 then
     echo -e "   [ \033[32mOK\033[00m ] Installation du Module keyboard !"
@@ -44,7 +44,7 @@ fi
 # pip install pygame --pre
 ############
 # Retouche de fichier audio
-pip install pydub
+pip install pydub --quiet
 if [ $? -eq 0 ]:
 then
     echo -e "   [ \033[32mOK\033[00m ] Installation du Module pydub !"
@@ -52,7 +52,7 @@ else
     echo -e "   [ \033[31mERREUR\033[00m ] Installation du Module pydub !"
 fi
 
-pip install ffmpeg --use-pep517
+pip install ffmpeg --use-pep517 --quiet
 if [ $? -eq 0 ]:
 then
     echo -e "   [ \033[32mOK\033[00m ] Installation du Module ffmpeg !"
@@ -60,7 +60,7 @@ else
     echo -e "   [ \033[31mERREUR\033[00m ] Installation du Module ffmpeg !"
 fi
 
-apt install ffmpeg -y
+apt install ffmpeg -yq
 if [ $? -eq 0 ]:
 then
     echo -e "   [ \033[32mOK\033[00m ] Installation de ffmpeg !"
@@ -69,7 +69,7 @@ else
 fi
 
 # Pour jouer son
-pip install numpy
+pip install numpy --quiet
 if [ $? -eq 0 ]:
 then
     echo -e "   [ \033[32mOK\033[00m ] Installation du Module numpy !"
@@ -77,7 +77,7 @@ else
     echo -e "   [ \033[31mERREUR\033[00m ] Installation du Module numpy !"
 fi
 
-apt install libasound2-dev -y
+apt install libasound2-dev -yq
 if [ $? -eq 0 ]:
 then
     echo -e "   [ \033[32mOK\033[00m ] Installation de libasound2-dev !"
@@ -85,22 +85,17 @@ else
     echo -e "   [ \033[31mERREUR\033[00m ] Installation de libasound2-dev !"
 fi
 
-pip install simpleaudio
+pip install simpleaudio --quiet
 if [ $? -eq 0 ]:
 then
     echo -e "   [ \033[32mOK\033[00m ] Installation du Module simpleaudio !"
+    echo -e "\033[32m[ OK ] Installation términée !\033[00m"
 else 
     echo -e "   [ \033[31mERREUR\033[00m ] Installation du Module simpleaudio !"
 fi
 
 ############
 
-if [ $? -eq 0 ];
-then
-    echo -e "\033[32m[ OK ] Installation términée !\033[00m"
-else 
-    echo -e "   [ \033[31mERREUR\033[00m ] Installation términée !"
-fi
 echo -e "\033[33m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\033[00m"
 
 echo -e "\033[35mpython3 PlaySond_PyDub.py \033[00m"
