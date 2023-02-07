@@ -214,13 +214,9 @@ Ritme_062 = Rassine + "/Ritme/WarmFuzz_120_C_101_SP03.mp3"
 
 
 
-
-audio = AudioSegment.from_file(Ritme_008)
-temp_file = "Ritme_008"
-sound.export(temp_file, format="mp3")
-
-wave_obj = sa.WaveObject.from_wave_file(temp_file)
+wave_obj = sa.WaveObject.from_wave_file(Ritme_008)
 play_obj = wave_obj.play()
+play_obj.wait_done()
 
 
 
