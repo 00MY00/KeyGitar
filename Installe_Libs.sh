@@ -12,6 +12,6 @@ then
     echo -e "\033[32m[ OK ] Installation términée !\033[00m"
 fi
 
-python3 PlaySond_PyDub.py
+echo "\033[35mpython3 PlaySond_PyDub.py"
 
 exit
