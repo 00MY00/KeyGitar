@@ -91,7 +91,7 @@ pip install simpleaudio --quiet
 if [ $? -eq 0 ];
 then
     echo -e "   [ \033[32mOK\033[00m ] Installation du Module simpleaudio !"
-    echo -e "\033[32m[ OK ] Installation términée !\033[00m"
+    echo -e "\033[34m   Installation términée !\033[00m"
 else 
     echo -e "   [ \033[31mERREUR\033[00m ] Installation du Module simpleaudio !"
 fi
