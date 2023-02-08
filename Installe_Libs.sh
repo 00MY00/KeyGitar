@@ -101,6 +101,6 @@ fi
 
 echo -e "\033[33m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\033[00m"
 
-echo -e "\033[35mpython3 PlaySond_PyDub.py \033[00m"
+echo -e "\033[35mpython3 KeyGitar.py \033[00m"
 
 exit
