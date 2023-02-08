@@ -75,6 +75,39 @@ for i in range(len(All_rep)):
 ###
 # Variable de fichier audio
 
+for i in range(len(All_rep)):
+    print(All_rep[i])
+
+
+## Exemple
+
+variable = ['Bass', 'Record']
+y = ['chemin1', 'chemin2', 'chemin3']
+# dans une boucle increment pour repertorier tous les répertoires
+# dabore crée toute les clé dans x se qui corespon a Bass Record et ensuite ajouter les chemins
+# x = {variable[0]: y}
+
+# executer le script 
+# ajoute les clés
+# x = {var: [] for var in variable}
+
+# crée une boucle qui récupère les chemin dans y
+
+# for item in variable:
+#     x[item].extend(y)
+x = {}
+for var in variable:
+    directory = RepTemporaire + var
+    y = [f for f in os.listdir(directory) if os.path.isfile(os.path.join(directory, f))]
+    x[var] = y
+
+
+
+
+print("Resulta de X : ", x)
+
+
+
 ###
 
 ################################################################
