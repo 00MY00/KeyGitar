@@ -82,7 +82,7 @@ for i in range(len(All_rep)):
 ## Exemple
 
 variable = ['Bass', 'Record']
-y = ['chemin1', 'chemin2', 'chemin3']
+# y = ['chemin1', 'chemin2', 'chemin3']
 # dans une boucle increment pour repertorier tous les répertoires
 # dabore crée toute les clé dans x se qui corespon a Bass Record et ensuite ajouter les chemins
 # x = {variable[0]: y}
