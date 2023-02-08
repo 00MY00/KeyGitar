@@ -79,12 +79,23 @@ for i in range(len(All_rep)):
     print(All_rep[i])
 
 
-# y = ['chemin1', 'chemin2', 'chemin3']
-# dans une boucle increment pour repertorier tous les répertoires
-# dabore crée toute les clé dans x se qui corespon a Bass Record et ensuite ajouter les chemins
-# x = {variable[0]: y}
+## Exemple
+#x = {}
+#file_list = []
+#for var in All_rep:
+#    directory = RepTemporaire + var + "/"
+    # y = os.listdir(directory)
+#    filenames = os.listdir(directory)
 
-# executer le script 
+#    for filename in directory:
+#        file_path = os.path.join(directory, filename)
+#        if os.path.isfile(file_path):
+#            file_list.append(filename)
+
+#    x[var] = file_list
+#    print(x)
+
+
 # ajoute les clés
 # x = {var: [] for var in variable}
 
@@ -93,18 +104,11 @@ for i in range(len(All_rep)):
 # for item in variable:
 #     x[item].extend(y)
 x = {}
-file_list = []
+y = []
 for var in All_rep:
     directory = RepTemporaire + var + "/"
-    # y = os.listdir(directory)
-    filenames = os.listdir(directory)
-
-    for filename in directory:
-        file_path = os.path.join(directory, filename)
-        if os.path.isfile(file_path):
-            file_list.append(filename)
-
-    x[var] = file_list
+    y = os.listdir(directory)
+    x[var] = y
     print(x)
 
 
