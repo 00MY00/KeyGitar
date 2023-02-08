@@ -35,6 +35,7 @@ else
     echo -e "   [ \033[31mERREUR\033[00m ] Mise à jour de PIP !"
 fi
 
+echo -e "\033[31m"
 pip install keyboard --quiet
 if [ $? -eq 0 ];
 then
@@ -47,6 +48,7 @@ fi
 # pip install pygame --pre
 ############
 # Retouche de fichier audio
+echo -e "\033[31m"
 pip install pydub --quiet
 if [ $? -eq 0 ];
 then
@@ -55,6 +57,7 @@ else
     echo -e "   [ \033[31mERREUR\033[00m ] Installation du Module pydub !"
 fi
 
+echo -e "\033[31m"
 pip install ffmpeg --use-pep517 --quiet
 if [ $? -eq 0 ];
 then
@@ -72,6 +75,7 @@ else
 fi
 
 # Pour jouer son
+echo -e "\033[31m"
 pip install numpy --quiet
 if [ $? -eq 0 ];
 then
@@ -88,6 +92,7 @@ else
     echo -e "   [ \033[31mERREUR\033[00m ] Installation de libasound2-dev !"
 fi
 
+echo -e "\033[31m"
 pip install simpleaudio --quiet
 if [ $? -eq 0 ];
 then
