@@ -100,6 +100,7 @@ for var in variable:
     directory = RepTemporaire + var + "/"
     y = os.listdir(directory)
     x[var] = y
+    print(x)
 
 
 
