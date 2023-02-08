@@ -98,7 +98,7 @@ y = ['chemin1', 'chemin2', 'chemin3']
 x = {}
 for var in variable:
     directory = RepTemporaire + var + "/"
-    y = [f for f in os.listdir(directory) if os.path.isfile(os.path.join(directory, f))]
+    y = os.listdir(directory)
     x[var] = y
 
 
