@@ -33,7 +33,7 @@ print("▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
 Racine = os.getcwd()
 
 # Pour entrer dans le répertoire son
-RepTemporaire = Racine + "/son/"
+RepTemporaire = Racine + "/son//"
 
 ###############################################
 # Convertion des fichier audio en 'WAV'
