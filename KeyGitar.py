@@ -96,10 +96,18 @@ variable = ['Bass', 'Record']
 # for item in variable:
 #     x[item].extend(y)
 x = {}
+file_list = []
 for var in variable:
     directory = RepTemporaire + var + "/"
-    y = os.listdir(directory)
-    x[var] = y
+    # y = os.listdir(directory)
+    filenames = os.listdir(directory)
+
+    for filename in directory:
+        file_path = os.path.join(directory, filename)
+        if os.path.isfile(file_path):
+            file_list.append(filename)
+
+    x[var] = file_list
     print(x)
 
 
