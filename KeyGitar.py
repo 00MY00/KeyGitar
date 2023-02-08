@@ -26,23 +26,50 @@ except ImportError:
     print("pydub n'est pas installé ou n'a pas été importé correctement.")
 print("▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬")
 
-
-
-
-
-
-
-
-
-
-
-
-###
+###############################################
 # Variable Racine
 
+#récupère le nom du repertoire courent Exemple : 'c:\User'
+Racine = os.getcwd()
 
-###
+# Pour entrer dans le répertoire son
+RepTemporaire = Racine + "/son//"
+
+###############################################
 # Convertion des fichier audio en 'WAV'
+# Appel de fonction Example : 'convert_mp3_to_wav("/chemin/du/répertoire")'
+
+def convert_mp3_to_wav(Repertoire):
+    for filename in os.listdir(Repertoire):
+        if filename.endswith(".mp3"):
+            filepath = os.path.join(Repertoire, filename)
+            sound = AudioSegment.from_mp3(filepath)
+            new_filename = os.path.splitext(filename)[0] + ".wav"
+            new_filepath = os.path.join(Repertoire, new_filename)
+            sound.export(new_filepath, format="wav")
+            os.remove(filepath)
+
+
+# Récupération des nom de répertoire
+# Appel de fonction Exemple : 'All_rep = get_all_dirs("/chemin/du/répertoire")'
+def get_all_dirs(Repertoire):
+    All_rep = []
+    for item in os.listdir(Repertoire):
+        item_path = os.path.join(Repertoire, item)
+        if os.path.isdir(item_path):
+            All_rep.append(item)
+    return All_rep
+
+
+
+
+# Recuperation des nom de Repertoire
+All_rep = get_all_dirs(RepTemporaire)
+
+# Boucle/loop pour convertire chaque répertoir
+for i in range(len(All_rep)):
+    print(RepTemporaire + All_rep[i])
+    convert_mp3_to_wav(RepTemporaire + All_rep[i])
 
 
 ###
