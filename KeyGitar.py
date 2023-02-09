@@ -88,10 +88,13 @@ for var in All_rep:
     x[var] = y
     y.clear()
 
-
-
-
+print("")
 print("Resulta de X : ", x)
+print("")
+for cle, valeur in x.items():
+    print(cle, valeur)
+
+
 
 
 
