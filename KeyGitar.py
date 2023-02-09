@@ -87,7 +87,6 @@ for var in All_rep:
     y = os.listdir(directory)
     x[var] = y
     y.clear()
-    print(x)
 
 
 
