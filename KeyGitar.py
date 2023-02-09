@@ -86,6 +86,7 @@ for var in All_rep:
     directory = RepTemporaire + var + "/"
     y = os.listdir(directory)
     x[var] = y
+    y.clear()
     print(x)
 
 
