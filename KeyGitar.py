@@ -81,12 +81,13 @@ for i in range(len(All_rep)):
 
 # Attention duplication !
 x = {}
+y = []
 for var in All_rep:
     directory = RepTemporaire + var + "/"
-    y = []
     y = os.listdir(directory)
     x[var] = y
-    y.clear()
+    # y.clear()
+    y = set()
 
 print("")
 print("Resulta de X : ", x)
