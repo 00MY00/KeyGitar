@@ -159,7 +159,14 @@ def profiles():
                 print("")
                 print("Affichage du contenu de répertoire !")
                 print("contenu du répertoire.")
-                # Sonds = x[All_rep[Profile_curent_repertoir]]
+
+                # Dois faire un affichage plus lisible Clé en hau et les valeur lignes par ligne avec le numero de choix
+                Affichage_sons_profile_choisi = x[All_rep[Profile_curent_repertoir]]
+                # Affichage des clés et des valeurs
+                for cle, valeur in Affichage_sons_profile_choisi.items():
+                    print(f"{cle}: {valeur}")
+
+                print("_____________________")
                 print(f"{x[All_rep[Profile_curent_repertoir]]}")
 
                 Profile_sond_atribution = input(": ")
