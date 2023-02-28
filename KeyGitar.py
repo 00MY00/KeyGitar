@@ -159,18 +159,18 @@ def profiles():
                 print("")
                 print("Affichage du contenu de répertoire !")
                 print("contenu du répertoire.")
+                print("_____________________")
 
                 # Dois faire un affichage plus lisible Clé en hau et les valeur lignes par ligne avec le numero de choix
                 # Affichage_sons_profile_choisi = x[All_rep[Profile_curent_repertoir]]
                 
                 Profile_repertoire_choix = RepTemporaire + All_rep[Profile_curent_repertoir]
-                print("Profile_repertoire_choix: ", Profile_repertoire_choix)
                 fichiers = os.listdir(Profile_repertoire_choix)
+                i = 0
                 for fichier in fichiers:
-                    print(fichier)
-
+                    print(f"[{i}]{fichier}")
+                    i += 1
                 print("_____________________")
-                print(f"{x[All_rep[Profile_curent_repertoir]]}")
 
                 Profile_sond_atribution = input(": ")
 
@@ -202,53 +202,53 @@ def profiles():
                 Touche_m = ""
 
 
-        # Entrées des sond pour les touche affiche les 
-        # deferant clés puis en le selectionent dans 
-        # l'ordre des lettre on indique le quelle de son et a utiliser avec un chiffre
-        # Exemple 
-        # [0] Basse
-        # [1] Choral
-        ###########
-        # Basse
-        # [0] Sond_basse_0
-        # [1] Sond_basse_1
-        ###################
-        # Lettre actuel [Q]
-        ###################
+                # Entrées des sond pour les touche affiche les 
+                # deferant clés puis en le selectionent dans 
+                # l'ordre des lettre on indique le quelle de son et a utiliser avec un chiffre
+                # Exemple 
+                # [0] Basse
+                # [1] Choral
+                ###########
+                # Basse
+                # [0] Sond_basse_0
+                # [1] Sond_basse_1
+                ###################
+                # Lettre actuel [Q]
+                ###################
 
-        
+                
 
 
-    # Définition des données pour le CSV
-    profile_Csv = [
-        ['Letter', 'Value'],
-        ['q', "{Touche_q}"],
-        ['w', "{Touche_w}"],
-        ['e', "{Touche_e}"]
-        ['r', "{Touche_r}"]
-        ['t', "{Touche_t}"]
-        ['z', "{Touche_z}"]
-        ['u', "{Touche_u}"]
-        ['i', "{Touche_i}"]
-        ['o', "{Touche_o}"]
-        ['p', "{Touche_p}"]
-        ['a', "{Touche_a}"]
-        ['s', "{Touche_s}"]
-        ['d', "{Touche_d}"]
-        ['f', "{Touche_f}"]
-        ['g', "{Touche_g}"]
-        ['h', "{Touche_h}"]
-        ['j', "{Touche_j}"]
-        ['k', "{Touche_k}"]
-        ['l', "{Touche_l}"]
-        ['y', "{Touche_y}"]
-        ['x', "{Touche_x}"]
-        ['c', "{Touche_c}"]
-        ['v', "{Touche_v}"]
-        ['b', "{Touche_b}"]
-        ['n', "{Touche_n}"]
-        ['m', "{Touche_m}"]    
-    ]
+                # Définition des données pour le CSV
+                profile_Csv = [
+                    ['Letter', 'Value'],
+                    ['q', "{Touche_q}"],
+                    ['w', "{Touche_w}"],
+                    ['e', "{Touche_e}"]
+                    ['r', "{Touche_r}"]
+                    ['t', "{Touche_t}"]
+                    ['z', "{Touche_z}"]
+                    ['u', "{Touche_u}"]
+                    ['i', "{Touche_i}"]
+                    ['o', "{Touche_o}"]
+                    ['p', "{Touche_p}"]
+                    ['a', "{Touche_a}"]
+                    ['s', "{Touche_s}"]
+                    ['d', "{Touche_d}"]
+                    ['f', "{Touche_f}"]
+                    ['g', "{Touche_g}"]
+                    ['h', "{Touche_h}"]
+                    ['j', "{Touche_j}"]
+                    ['k', "{Touche_k}"]
+                    ['l', "{Touche_l}"]
+                    ['y', "{Touche_y}"]
+                    ['x', "{Touche_x}"]
+                    ['c', "{Touche_c}"]
+                    ['v', "{Touche_v}"]
+                    ['b', "{Touche_b}"]
+                    ['n', "{Touche_n}"]
+                    ['m', "{Touche_m}"]    
+                ]
 
 
 
