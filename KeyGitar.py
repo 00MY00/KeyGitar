@@ -137,7 +137,7 @@ def profiles():
                 Profile_curent_repertoir = int(input("Entrez votre choix : "))
                 
                 # Condition de sortye du mode profil
-                if Profile_curent_repertoir == -1:
+                if Profile_curent_repertoir == "-1":
                     Profile_chox_sond = 0
                     break
 
@@ -161,10 +161,13 @@ def profiles():
                 print("contenu du répertoire.")
 
                 # Dois faire un affichage plus lisible Clé en hau et les valeur lignes par ligne avec le numero de choix
-                Affichage_sons_profile_choisi = x[All_rep[Profile_curent_repertoir]]
-                # Affichage des clés et des valeurs
-                for cle, valeur in Affichage_sons_profile_choisi.items():
-                    print(f"{cle}: {valeur}")
+                # Affichage_sons_profile_choisi = x[All_rep[Profile_curent_repertoir]]
+                
+                Profile_repertoire_choix = RepTemporaire + All_rep[Profile_curent_repertoir]
+                print("Profile_repertoire_choix: ", Profile_repertoire_choix)
+                fichiers = os.listdir(Profile_repertoire_choix)
+                for fichier in fichiers:
+                    print(fichier)
 
                 print("_____________________")
                 print(f"{x[All_rep[Profile_curent_repertoir]]}")
