@@ -66,7 +66,6 @@ def get_all_dirs(Repertoire):
         item_path = os.path.join(Repertoire, item)
         if os.path.isdir(item_path):
             All_rep.append(item)
-    print("--------")
     return All_rep
 
 # Recuperation des nom de Repertoire
@@ -84,6 +83,7 @@ print("--------")
 # Ajout des nom des fichier audios 
 # la clé = nom du répertoire. les valeurs = les nom des fichier.
 # la variable x contien tous les clé et chemin !
+print("Creation du dictionaire de sond !")
 for i in range(len(All_rep)):
     print(All_rep[i])
 
@@ -94,8 +94,10 @@ for var in All_rep:
     y = os.listdir(directory)
     x[var] = y
     y = set()
-
-
+print("Affichage du dictionaire !")
+for cle, valeur in x.items():
+    print(f"{cle}: {valeur}")
+print("--------")
 #----------------------------------------------
 ###############################################
 # Fonctions du programe
