@@ -60,21 +60,24 @@ def convert_mp3_to_wav(Repertoire):
 # Récupération des nom de répertoire
 # Appel de fonction Exemple : 'All_rep = get_all_dirs("/chemin/du/répertoire")'
 def get_all_dirs(Repertoire):
+    print("Recuperation des repertoires")
     All_rep = []
     for item in os.listdir(Repertoire):
         item_path = os.path.join(Repertoire, item)
         if os.path.isdir(item_path):
             All_rep.append(item)
+    print("--------")
     return All_rep
 
 # Recuperation des nom de Repertoire
 All_rep = get_all_dirs(RepTemporaire)
 
 # Boucle/loop pour convertire chaque répertoir
+print("Convertion des repertoire")
 for i in range(len(All_rep)):
     print(RepTemporaire + All_rep[i])
     convert_mp3_to_wav(RepTemporaire + All_rep[i])
-
+print("--------")
 
 #----------------------------------------------
 ###############################################
