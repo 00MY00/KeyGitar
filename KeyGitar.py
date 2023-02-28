@@ -159,7 +159,8 @@ def profiles():
                 print("")
                 print("Affichage du contenu de répertoire !")
                 print("contenu du répertoire.")
-                print("_____________________")
+                print("Entez [-1] pour quiter.")
+                print("---------------------")
 
                 # Dois faire un affichage plus lisible Clé en hau et les valeur lignes par ligne avec le numero de choix
                 # Affichage_sons_profile_choisi = x[All_rep[Profile_curent_repertoir]]
@@ -168,11 +169,21 @@ def profiles():
                 fichiers = os.listdir(Profile_repertoire_choix)
                 i = 0
                 for fichier in fichiers:
-                    print(f"[{i}]{fichier}")
+                    print(f"[{i}] {fichier}")
                     i += 1
                 print("_____________________")
 
                 Profile_sond_atribution = input(": ")
+                Profile_sond_atribution = x[All_rep[Profile_curent_repertoir]][Profile_sond_atribution]
+
+                if Profile_sond_atribution in x.All_rep[Profile_curent_repertoir]:
+                    print(Profile_sond_atribution)
+                    print("Exist")
+                else:
+                    print("NOM")
+                
+                input()
+                
 
                 Touche_q = ""
                 Touche_w = ""
