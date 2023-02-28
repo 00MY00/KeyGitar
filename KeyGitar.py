@@ -167,6 +167,7 @@ def profiles():
                 
                 Profile_repertoire_choix = RepTemporaire + All_rep[Profile_curent_repertoir]
                 fichiers = os.listdir(Profile_repertoire_choix)
+                # Affichage du contenu du répertoire choisi
                 i = 0
                 for fichier in fichiers:
                     print(f"[{i}] {fichier}")
@@ -174,8 +175,13 @@ def profiles():
                 print("_____________________")
 
                 Profile_sond_atribution = input(": ")
-                Profile_sond_atribution = x[All_rep[Profile_curent_repertoir]][Profile_sond_atribution]
+                # transformation du chiffre de selection en nom du fichier musique
+                try:
+                    Profile_sond_atribution = x[All_rep[Profile_curent_repertoir]][Profile_sond_atribution]
+                except ValueError:
+                    print("le choi n'existe pas !")
 
+                # Test ci la valeur existe
                 if Profile_sond_atribution in x.All_rep[Profile_curent_repertoir]:
                     print(Profile_sond_atribution)
                     print("Exist")
