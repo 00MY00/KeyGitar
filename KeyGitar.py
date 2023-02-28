@@ -175,11 +175,13 @@ def profiles():
                 print("_____________________")
 
                 Profile_sond_atribution = input(": ")
+                Profile_sond_atribution = int(Profile_sond_atribution)
                 # transformation du chiffre de selection en nom du fichier musique
-                try:
-                    Profile_sond_atribution = x[All_rep[Profile_curent_repertoir][Profile_sond_atribution]]
-                except ValueError:
-                    print("le choi n'existe pas !")
+                print(x[All_rep[Profile_curent_repertoir]][Profile_sond_atribution])
+                #try:
+                 #   Profile_sond_atribution = x[All_rep[Profile_curent_repertoir][Profile_sond_atribution]]
+                #except ValueError:
+                #    print("le choi n'existe pas !")
 
                 # Test ci la valeur existe
                 if Profile_sond_atribution in x.All_rep[Profile_curent_repertoir]:
