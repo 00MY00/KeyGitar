@@ -177,7 +177,7 @@ def profiles():
                 Profile_sond_atribution = input(": ")
                 # transformation du chiffre de selection en nom du fichier musique
                 try:
-                    Profile_sond_atribution = x[All_rep[Profile_curent_repertoir]][Profile_sond_atribution]
+                    Profile_sond_atribution = x[All_rep[Profile_curent_repertoir][Profile_sond_atribution]]
                 except ValueError:
                     print("le choi n'existe pas !")
 
