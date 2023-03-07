@@ -243,30 +243,30 @@ def profiles_Creation_csv(nom, lettre, path):
             ['Letter', 'Value'],
             ['q', "Vide"],
             ['w', "Vide"],
-            ['e', "Vide"]
-            ['r', "Vide"]
-            ['t', "Vide"]
-            ['z', "Vide"]
-            ['u', "Vide"]
-            ['i', "Vide"]
-            ['o', "Vide"]
-            ['p', "Vide"]
-            ['a', "Vide"]
-            ['s', "Vide"]
-            ['d', "Vide"]
-            ['f', "Vide"]
-            ['g', "Vide"]
-            ['h', "Vide"]
-            ['j', "Vide"]
-            ['k', "Vide"]
-            ['l', "Vide"]
-            ['y', "Vide"]
-            ['x', "Vide"]
-            ['c', "Vide"]
-            ['v', "Vide"]
-            ['b', "Vide"]
-            ['n', "Vide"]
-            ['m', "Vide"]    
+            ['e', "Vide"],
+            ['r', "Vide"],
+            ['t', "Vide"],
+            ['z', "Vide"],
+            ['u', "Vide"],
+            ['i', "Vide"],
+            ['o', "Vide"],
+            ['p', "Vide"],
+            ['a', "Vide"],
+            ['s', "Vide"],
+            ['d', "Vide"],
+            ['f', "Vide"],
+            ['g', "Vide"],
+            ['h', "Vide"],
+            ['j', "Vide"],
+            ['k', "Vide"],
+            ['l', "Vide"],
+            ['y', "Vide"],
+            ['x', "Vide"],
+            ['c', "Vide"],
+            ['v', "Vide"],
+            ['b', "Vide"],
+            ['n', "Vide"],
+            ['m', "Vide"],   
             ]
 
         # Ajoute le nouveau chemin
