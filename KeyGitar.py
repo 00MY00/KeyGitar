@@ -104,9 +104,10 @@ print("--------")
 
 
 # Profiles en entrent le chifre changera le profil
-def profiles():
+def profiles(lettre):
     while True:
         os.system('clear')
+        print("Lettre celectionée : ", lettre)
         print("")
         print("Entrée le nom de la touche qui sera relier au profile !")
         print("")
@@ -115,13 +116,17 @@ def profiles():
 
         if Profile_Name.isdigit() and int(Profile_Name) >= 0 and int(Profile_Name) <= 9:
             print("Touche du Profile : ", Profile_Name)
+            return Profile_Name
             break
         else:
             print("Erreur d'entée seul et suporter des chiffres de 0 à 9 !")
 
+
+def profiles_sond(lettre):
     # Profile choix du répertoire de sond a utiliser
     while True:
         os.system('clear')
+        print("Lettre celectionée : ", lettre)
         print("")
         print("Affichage des Repertoire de 'son'")
         print("Entez [-1] pour quiter.")
@@ -156,6 +161,7 @@ def profiles():
         if Profile_chox_sond == 1:
             while True:
                 os.system('clear')
+                print("Lettre celectionée : ", lettre)
                 print("")
                 print("Affichage du contenu de répertoire !")
                 print("contenu du répertoire.")
@@ -176,50 +182,64 @@ def profiles():
 
                 Profile_sond_atribution = input(": ")
                 Profile_sond_atribution = int(Profile_sond_atribution)
-                # transformation du chiffre de selection en nom du fichier musique
-                print("Resultat : ", x[All_rep[Profile_curent_repertoir]][Profile_sond_atribution])
-                print("Nom Profile", Profile_Name)
-                print("Repertoire Temporaire : ", RepTemporaire)
-                print("Dossier de Sond: ", All_rep[Profile_curent_repertoir])
-                print("Fichier Sond selectioner : ", x[All_rep[Profile_curent_repertoir]][Profile_sond_atribution])
+                # Affichage Débegage
+                #print("Resultat : ", x[All_rep[Profile_curent_repertoir]][Profile_sond_atribution])
+                #print("Nom Profile", Profile_Name)
+                #print("Repertoire Temporaire : ", RepTemporaire)
+                #print("Dossier de Sond: ", All_rep[Profile_curent_repertoir])
+                #print("Fichier Sond selectioner : ", x[All_rep[Profile_curent_repertoir]][Profile_sond_atribution])
                 print("Chemin : ", RepTemporaire + All_rep[Profile_curent_repertoir] + "/" + x[All_rep[Profile_curent_repertoir]][Profile_sond_atribution])
-
-                # Test ci la valeur existe
-                #if Profile_sond_atribution in x.All_rep[Profile_curent_repertoir]:
-                #    print(Profile_sond_atribution)
-                #    print("Exist")
-                #else:
-                #    print("NOM")
+                Profile_chemin_choi = RepTemporaire + All_rep[Profile_curent_repertoir] + "/" + x[All_rep[Profile_curent_repertoir]][Profile_sond_atribution]
+                return Profile_chemin_choi
                 
-                Pause = input("Pause")
-                
+def profiles_touche():
+    while True:
+        os.system('clear')
+        print("")
+        print("Choisicer la touche sur la quelle ajouter un sond")
+        print("DE a - z")
+        print("")
 
-                Touche_q = ""
-                Touche_w = ""
-                Touche_e = ""
-                Touche_r = ""
-                Touche_t = ""
-                Touche_z = ""
-                Touche_u = ""
-                Touche_i = ""
-                Touche_o = ""
-                Touche_p = ""
-                Touche_a = ""
-                Touche_s = ""
-                Touche_d = ""
-                Touche_f = ""
-                Touche_g = ""
-                Touche_h = ""
-                Touche_j = ""
-                Touche_k = ""
-                Touche_l = ""
-                Touche_y = ""
-                Touche_x = ""
-                Touche_c = ""
-                Touche_v = ""
-                Touche_b = ""
-                Touche_n = ""
-                Touche_m = ""
+
+        touche_profile_choisi = input(": ")
+        touche_profile_choisi = str(touche_profile_choisi)
+
+        # Vérification si la chaîne est composée d'un seul caractère alphabétique
+        if len(touche_profile_choisi) == 1 and touche_profile_choisi.isalpha():
+            touche_profile_choisi = touche_profile_choisi.lower()
+            print("La chaîne est un seul caractère alphabétique en minuscules : ", touche_profile_choisi)
+            pause = input("PAUSE")
+
+        else:
+            print("La chaîne n'est pas valide.")
+
+
+        Touche_q = ""
+        Touche_w = ""
+        Touche_e = ""
+        Touche_r = ""
+        Touche_t = ""
+        Touche_z = ""
+        Touche_u = ""
+        Touche_i = ""
+        Touche_o = ""
+        Touche_p = ""
+        Touche_a = ""
+        Touche_s = ""
+        Touche_d = ""
+        Touche_f = ""
+        Touche_g = ""
+        Touche_h = ""
+        Touche_j = ""
+        Touche_k = ""
+        Touche_l = ""
+        Touche_y = ""
+        Touche_x = ""
+        Touche_c = ""
+        Touche_v = ""
+        Touche_b = ""
+        Touche_n = ""
+        Touche_m = ""
 
 
                 # Entrées des sond pour les touche affiche les 
@@ -240,7 +260,7 @@ def profiles():
 
 
                 # Définition des données pour le CSV
-                profile_Csv = [
+            profile_Csv = [
                     ['Letter', 'Value'],
                     ['q', "{Touche_q}"],
                     ['w', "{Touche_w}"],
