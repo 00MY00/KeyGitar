@@ -32,7 +32,7 @@ except ImportError:
     print("pydub n'est pas installé ou n'a pas été importé correctement.")
 try:
     from pydub import AudioSegment
-    import re as sa
+    import re
     print("re est installé et importé correctement.")
 except ImportError:
     print("re n'est pas installé ou n'a pas été importé correctement.")
