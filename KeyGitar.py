@@ -297,6 +297,8 @@ def profiles_Creation_csv(nom, lettre, path):
 def profiles_touche():
     while True:
         os.system('clear')
+        if Profile_lettre is not None and Profile_lettre.strip():
+            print("Nom du Profile précedeament utilisée : ", Profile_lettre)
         print("")
         print("Choisicer la touche sur la quelle ajouter un sond")
         print("DE a - z")
