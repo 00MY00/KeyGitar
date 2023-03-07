@@ -137,7 +137,7 @@ def profiles():
                 Profile_curent_repertoir = int(input("Entrez votre choix : "))
                 
                 # Condition de sortye du mode profil
-                if Profile_curent_repertoir == "-1":
+                if str(Profile_curent_repertoir) == "-1":
                     Profile_chox_sond = 0
                     break
 
@@ -152,7 +152,7 @@ def profiles():
             except ValueError:
                 print("Veuillez entrer un nombre entier !")
 
-        # Profile permet de voire le nom des sond et des les atribuer a une touche
+        # Profile permet de voire le nom des sond et de les atribuer a une touche
         if Profile_chox_sond == 1:
             while True:
                 os.system('clear')
@@ -177,20 +177,20 @@ def profiles():
                 Profile_sond_atribution = input(": ")
                 Profile_sond_atribution = int(Profile_sond_atribution)
                 # transformation du chiffre de selection en nom du fichier musique
-                print(x[All_rep[Profile_curent_repertoir]][Profile_sond_atribution])
-                #try:
-                 #   Profile_sond_atribution = x[All_rep[Profile_curent_repertoir][Profile_sond_atribution]]
-                #except ValueError:
-                #    print("le choi n'existe pas !")
+                print("Resultat : ", x[All_rep[Profile_curent_repertoir]][Profile_sond_atribution])
+                print("Nom Profile", Profile_Name)
+                print("Repertoire Temporaire : ", RepTemporaire)
+                print("Dossier de Sond: ", All_rep[Profile_curent_repertoir])
+                print("Fichier Sond selectioner : ", x[All_rep[Profile_curent_repertoir]][Profile_sond_atribution])
 
                 # Test ci la valeur existe
-                if Profile_sond_atribution in x.All_rep[Profile_curent_repertoir]:
-                    print(Profile_sond_atribution)
-                    print("Exist")
-                else:
-                    print("NOM")
+                #if Profile_sond_atribution in x.All_rep[Profile_curent_repertoir]:
+                #    print(Profile_sond_atribution)
+                #    print("Exist")
+                #else:
+                #    print("NOM")
                 
-                input()
+                Pause = input("Pause")
                 
 
                 Touche_q = ""
