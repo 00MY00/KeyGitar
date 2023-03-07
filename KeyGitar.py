@@ -216,8 +216,10 @@ def profiles_Creation_csv(nom, lettre, path):
             reader = csv.reader(csvfile)
             profile_Csv = list(reader)
         
-        # Ajoute le nouveau valeur a la clé
-        profile_Csv[lettre] = path
+        # Ajoute le nouveau chemin a la clé
+        for i in range(len(profile_Csv)):
+            if profile_Csv[i][0] == lettre:
+                profile_Csv[i][1] = path
 
         # Ouverture du fichier en mode écriture avec l'encodage UTF-8
         with open(file_name, 'w', newline='', encoding='utf-8') as csvfile:
@@ -230,7 +232,7 @@ def profiles_Creation_csv(nom, lettre, path):
                 writer.writerow(row)
         # Affichage de la donnée ajoutée
         os.system('clear')
-        print("Ajout de : ", profile_Csv[lettre])
+        print("Ajout de : ", profile_Csv, "à", lettre)
         
     # Le fichier n'existe pas encore
     else:
@@ -270,7 +272,10 @@ def profiles_Creation_csv(nom, lettre, path):
             ]
 
         # Ajoute le nouveau chemin
-        profile_Csv[lettre] = path
+        for i in range(len(profile_Csv)):
+            if profile_Csv[i][0] == lettre:
+                profile_Csv[i][1] = path
+
 
         # Ouverture du fichier en mode écriture avec l'encodage UTF-8
         with open(file_name, 'w', newline='', encoding='utf-8') as csvfile:
@@ -283,7 +288,7 @@ def profiles_Creation_csv(nom, lettre, path):
                 writer.writerow(row)
         # Affichage de la valeur ajoutée
         os.system('clear')
-        print("Ajout de : ", profile_Csv[lettre])
+        print("Ajout de : ", profile_Csv, "à", lettre)
 
 
 
