@@ -109,7 +109,7 @@ print("--------")
 ###############################################
 # Fonctions du programe
 
-
+############################################################ Fonction Profiles
 # Profiles en entrent le chifre changera le profil
 def profiles(lettre):
     while True:
@@ -129,8 +129,6 @@ def profiles(lettre):
         else:
             print("Erreur d'entée seul et suporter des chiffres de 0 à 9 !")
     
-
-
 def profiles_sond(lettre):
     # Profile choix du répertoire de sond a utiliser
     while True:
@@ -201,7 +199,6 @@ def profiles_sond(lettre):
                 Profile_chemin_choi = RepTemporaire + All_rep[Profile_curent_repertoir] + "/" + x[All_rep[Profile_curent_repertoir]][Profile_sond_atribution]
                 return Profile_chemin_choi
                 break
-
 
 def profiles_Creation_csv(nom, lettre, path):
 
@@ -276,7 +273,6 @@ def profiles_Creation_csv(nom, lettre, path):
             if profile_Csv[i][0] == lettre:
                 profile_Csv[i][1] = path
 
-
         # Ouverture du fichier en mode écriture avec l'encodage UTF-8
         with open(file_name, 'w', newline='', encoding='utf-8') as csvfile:
             
@@ -290,12 +286,13 @@ def profiles_Creation_csv(nom, lettre, path):
         os.system('clear')
         print("Ajout de : ", profile_Csv, "à", lettre)
 
-
+# Fonction à appeler pour Profile
 def profiles_touche():
     while True:
         os.system('clear')
-        if Profile_lettre is not None and Profile_lettre.strip():
-            print("Nom du Profile précedeament utilisée : ", Profile_lettre)
+        if getattr(Profile_lettre, 'strip', lambda: '')():
+            print("Nom du Profile précédemment utilisé : ", Profile_lettre)
+
         print("")
         print("Choisicer la touche sur la quelle ajouter un sond")
         print("DE a - z")
@@ -321,9 +318,25 @@ def profiles_touche():
 
         else:
             print("La chaîne n'est pas valide.")
+############################################################ FIN PROFIL
 
+# Detection des touches
+def capteur_entree():
+    pygame.init()
+    screen = pygame.display.set_mode((200, 200))
+    pygame.display.set_caption("Pygame Keyboard Input")
+    
+    while True:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                return
+            
+            if event.type == pygame.KEYDOWN:
+                key_name = pygame.key.name(event.key)
+                print("Touche entrée : ", key_name)
 
-
+############################################################ FIN DETECTION DE TOUCHE
 
 
 
@@ -337,8 +350,8 @@ def profiles_touche():
 
 
 # Pour test
-profiles_touche()
-
+# profiles_touche() # Creation de Profil
+capteur_entree()
 
 
 
