@@ -117,6 +117,7 @@ def profiles(lettre):
         print("Lettre celectionée : ", lettre)
         print("")
         print("Entrée le nom de la touche qui sera relier au profile !")
+        print("Exemple : '1'")
         print("")
 
         Profile_Name = input(": ")
