@@ -324,10 +324,18 @@ def profiles_touche():
 # Detection des touches
 
 def capteur_entree():
-    while True:
-        event = keyboard.read_event()
-        if event.event_type == "down":
-            print("Touche entrée : ", event.name)
+    def on_press(key):
+        try:
+            print('Touche entrée: {0}'.format(key.char))
+        except AttributeError:
+            print('Touche entrée: {0}'.format(key))
+
+    def on_release(key):
+        if key == keyboard.Key.esc:
+            return False
+
+    with keyboard.Listener(on_press=on_press, on_release=on_release) as listener:
+        listener.join()
 
 ############################################################ FIN DETECTION DE TOUCHE
 
