@@ -123,9 +123,10 @@ def profiles(lettre):
         if Profile_Name.isdigit() and int(Profile_Name) >= 0 and int(Profile_Name) <= 9:
             print("Touche du Profile : ", Profile_Name)
             return Profile_Name
-            break
+            
         else:
             print("Erreur d'entée seul et suporter des chiffres de 0 à 9 !")
+    
 
 
 def profiles_sond(lettre):
@@ -197,75 +198,83 @@ def profiles_sond(lettre):
                 print("Chemin : ", RepTemporaire + All_rep[Profile_curent_repertoir] + "/" + x[All_rep[Profile_curent_repertoir]][Profile_sond_atribution])
                 Profile_chemin_choi = RepTemporaire + All_rep[Profile_curent_repertoir] + "/" + x[All_rep[Profile_curent_repertoir]][Profile_sond_atribution]
                 return Profile_chemin_choi
-                
-def profiles_touche():
-    while True:
-        os.system('clear')
-        print("")
-        print("Choisicer la touche sur la quelle ajouter un sond")
-        print("DE a - z")
-        print("")
+                break
 
 
-        touche_profile_choisi = input(": ")
-        touche_profile_choisi = str(touche_profile_choisi)
+def profiles_Creation_csv(nom, lettre, path):
 
-        # Vérification si la chaîne est composée d'un seul caractère alphabétique
-        pattern = r'^[a-zA-Z]+$'
-        if len(touche_profile_choisi) == 1 and touche_profile_choisi.isalpha() and re.match(pattern, touche_profile_choisi):
-            touche_profile_choisi = touche_profile_choisi.lower()
-            print("La chaîne est un seul caractère alphabétique en minuscules : ", touche_profile_choisi)
-            pause = input("PAUSE")
+    # Le nom du fichier CSV sera la valeur de la lettre suivie de ".csv"
+    file_name = "Profile_" + nom.lower() + ".csv"
 
+    # Verification ci le fichier existe déja
+    if os.path.isfile(file_name):
+        print("existe")
+        with open(file_name, newline='') as csvfile:
+            reader = csv.reader(csvfile)
+            profile_Csv = list(reader)
+        
+        # Ajoute le nouveau chemin
+        profile_Csv[lettre] = path
+
+        # Ouverture du fichier en mode écriture avec l'encodage UTF-8
+        with open(file_name, 'w', newline='', encoding='utf-8') as csvfile:
+            
+            # Création de l'objet writer pour écrire dans le fichier
+            writer = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+            
+            # Écriture des données dans le fichier
+            for row in profile_Csv:
+                writer.writerow(row)
+        print("Ajout de : ", profile_Csv[lettre])
+
+    else:
+        if 'profile_Csv' in locals():
+            print("La variable existe !")
         else:
-            print("La chaîne n'est pas valide.")
+            profile_Csv = [
+            ['Letter', 'Value'],
+            ['q', "Vide"],
+            ['w', "Vide"],
+            ['e', "Vide"]
+            ['r', "Vide"]
+            ['t', "Vide"]
+            ['z', "Vide"]
+            ['u', "Vide"]
+            ['i', "Vide"]
+            ['o', "Vide"]
+            ['p', "Vide"]
+            ['a', "Vide"]
+            ['s', "Vide"]
+            ['d', "Vide"]
+            ['f', "Vide"]
+            ['g', "Vide"]
+            ['h', "Vide"]
+            ['j', "Vide"]
+            ['k', "Vide"]
+            ['l', "Vide"]
+            ['y', "Vide"]
+            ['x', "Vide"]
+            ['c', "Vide"]
+            ['v', "Vide"]
+            ['b', "Vide"]
+            ['n', "Vide"]
+            ['m', "Vide"]    
+        ]
 
+        # Ajoute le nouveau chemin
+        profile_Csv[lettre] = path
 
-        Touche_q = ""
-        Touche_w = ""
-        Touche_e = ""
-        Touche_r = ""
-        Touche_t = ""
-        Touche_z = ""
-        Touche_u = ""
-        Touche_i = ""
-        Touche_o = ""
-        Touche_p = ""
-        Touche_a = ""
-        Touche_s = ""
-        Touche_d = ""
-        Touche_f = ""
-        Touche_g = ""
-        Touche_h = ""
-        Touche_j = ""
-        Touche_k = ""
-        Touche_l = ""
-        Touche_y = ""
-        Touche_x = ""
-        Touche_c = ""
-        Touche_v = ""
-        Touche_b = ""
-        Touche_n = ""
-        Touche_m = ""
+        # Ouverture du fichier en mode écriture avec l'encodage UTF-8
+        with open(file_name, 'w', newline='', encoding='utf-8') as csvfile:
+            
+            # Création de l'objet writer pour écrire dans le fichier
+            writer = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+            
+            # Écriture des données dans le fichier
+            for row in profile_Csv:
+                writer.writerow(row)
+        print("Ajout de : ", profile_Csv[lettre])
 
-
-        # Entrées des sond pour les touche affiche les 
-        # deferant clés puis en le selectionent dans 
-        # l'ordre des lettre on indique le quelle de son et a utiliser avec un chiffre
-        # Exemple 
-        # [0] Basse
-        # [1] Choral
-        ###########
-        # Basse
-        # [0] Sond_basse_0
-        # [1] Sond_basse_1
-        ###################
-        # Lettre actuel [Q]
-        ###################
-
-                
-
-def profiles_Creation_csv():
     # Définition des données pour le CSV
     profile_Csv = [
         ['Letter', 'Value'],
@@ -296,6 +305,60 @@ def profiles_Creation_csv():
         ['n', "{Touche_n}"]
         ['m', "{Touche_m}"]    
     ]
+
+
+
+
+def profiles_touche():
+    while True:
+        os.system('clear')
+        print("")
+        print("Choisicer la touche sur la quelle ajouter un sond")
+        print("DE a - z")
+        print("")
+
+
+        touche_profile_choisi = input(": ")
+        touche_profile_choisi = str(touche_profile_choisi)
+
+        # Vérification si la chaîne est composée d'un seul caractère alphabétique
+        pattern = r'^[a-zA-Z]+$'
+        if len(touche_profile_choisi) == 1 and touche_profile_choisi.isalpha() and re.match(pattern, touche_profile_choisi):
+            touche_profile_choisi = touche_profile_choisi.lower()
+            # Debegage
+            #print("La chaîne : ", touche_profile_choisi)
+            #pause = input("PAUSE")
+            Profile_lettre = profiles(touche_profile_choisi)
+            profil_audio_chemin = profiles_sond(touche_profile_choisi)
+
+            # Nom du profile, touche a utiliser, chemin du sond
+            profiles_Creation_csv(Profile_lettre, touche_profile_choisi, profil_audio_chemin)
+            
+
+        else:
+            print("La chaîne n'est pas valide.")
+
+
+        
+
+
+        # Entrées des sond pour les touche affiche les 
+        # deferant clés puis en le selectionent dans 
+        # l'ordre des lettre on indique le quelle de son et a utiliser avec un chiffre
+        # Exemple 
+        # [0] Basse
+        # [1] Choral
+        ###########
+        # Basse
+        # [0] Sond_basse_0
+        # [1] Sond_basse_1
+        ###################
+        # Lettre actuel [Q]
+        ###################
+
+                
+
+
 
 
 
