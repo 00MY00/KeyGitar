@@ -321,24 +321,9 @@ def profiles_touche():
             print("La chaîne n'est pas valide.")
 ############################################################ FIN PROFIL
 
-# Detection des touches
 
-def capteur_entree():
-    def on_press(key):
-        try:
-            print('Touche entrée: {0}'.format(key.char))
-        except AttributeError:
-            print('Touche entrée: {0}'.format(key))
-
-    def on_release(key):
-        if key == keyboard.Key.esc:
-            return False
-
-    with keyboard.Listener(on_press=on_press, on_release=on_release) as listener:
-        listener.join()
 
 ############################################################ FIN DETECTION DE TOUCHE
-
 
 
 
@@ -352,9 +337,160 @@ def capteur_entree():
 
 # Pour test
 # profiles_touche() # Creation de Profil
-capteur_entree()
 
 
+def touche_entrer_a():
+    print("Tu as entré a")
+
+def touche_entrer_b():
+    print("Tu as entré b")
+
+def touche_entrer_c():
+    print("Tu as entré c")
+
+def touche_entrer_d():
+    print("Tu as entré d")
+
+def touche_entrer_e():
+    print("Tu as entré e")
+
+def touche_entrer_f():
+    print("Tu as entré f")
+
+def touche_entrer_g():
+    print("Tu as entré g")
+
+def touche_entrer_h():
+    print("Tu as entré h")
+
+def touche_entrer_i():
+    print("Tu as entré i")
+
+def touche_entrer_j():
+    print("Tu as entré j")
+
+def touche_entrer_k():
+    print("Tu as entré k")
+
+def touche_entrer_l():
+    print("Tu as entré l")
+
+def touche_entrer_m():
+    print("Tu as entré m")
+
+def touche_entrer_n():
+    print("Tu as entré n")
+
+def touche_entrer_o():
+    print("Tu as entré o")
+
+def touche_entrer_p():
+    print("Tu as entré p")
+
+def touche_entrer_q():
+    print("Tu as entré q")
+
+def touche_entrer_r():
+    print("Tu as entré r")
+
+def touche_entrer_s():
+    print("Tu as entré s")
+
+def touche_entrer_t():
+    print("Tu as entré t")
+
+def touche_entrer_u():
+    print("Tu as entré u")
+
+def touche_entrer_v():
+    print("Tu as entré v")
+
+def touche_entrer_w():
+    print("Tu as entré w")
+
+def touche_entrer_x():
+    print("Tu as entré x")
+
+def touche_entrer_y():
+    print("Tu as entré y")
+
+def touche_entrer_z():
+    print("Tu as entré z")
+
+def touche_entrer_0():
+    print("Tu as entré 0")
+
+def touche_entrer_1():
+    print("Tu as entré 1")
+
+def touche_entrer_2():
+    print("Tu as entré 2")
+
+def touche_entrer_3():
+    print("Tu as entré 3")
+
+def touche_entrer_4():
+    print("Tu as entré 4")
+
+def touche_entrer_5():
+    print("Tu as entré 5")
+
+def touche_entrer_6():
+    print("Tu as entré 6")
+
+def touche_entrer_7():
+    print("Tu as entré 7")
+
+def touche_entrer_8():
+    print("Tu as entré 8")
+
+def touche_entrer_9():
+    print("Tu as entré 9")
+
+keyboard.add_hotkey("a", touche_entrer_a)
+keyboard.add_hotkey("b", touche_entrer_b)
+keyboard.add_hotkey("c", touche_entrer_c)
+keyboard.add_hotkey("d", touche_entrer_d)
+keyboard.add_hotkey("e", touche_entrer_e)
+keyboard.add_hotkey("f", touche_entrer_f)
+keyboard.add_hotkey("g", touche_entrer_g)
+keyboard.add_hotkey("h", touche_entrer_h)
+keyboard.add_hotkey("i", touche_entrer_i)
+keyboard.add_hotkey("j", touche_entrer_j)
+keyboard.add_hotkey("k", touche_entrer_k)
+keyboard.add_hotkey("l", touche_entrer_l)
+keyboard.add_hotkey("m", touche_entrer_m)
+keyboard.add_hotkey("n", touche_entrer_n)
+keyboard.add_hotkey("o", touche_entrer_o)
+keyboard.add_hotkey("p", touche_entrer_p)
+keyboard.add_hotkey("q", touche_entrer_q)
+keyboard.add_hotkey("r", touche_entrer_r)
+keyboard.add_hotkey("s", touche_entrer_s)
+keyboard.add_hotkey("t", touche_entrer_t)
+keyboard.add_hotkey("u", touche_entrer_u)
+keyboard.add_hotkey("v", touche_entrer_v)
+keyboard.add_hotkey("w", touche_entrer_w)
+keyboard.add_hotkey("x", touche_entrer_x)
+keyboard.add_hotkey("y", touche_entrer_y)
+keyboard.add_hotkey("z", touche_entrer_z)
+keyboard.add_hotkey("0", touche_entrer_0)
+keyboard.add_hotkey("1", touche_entrer_1)
+keyboard.add_hotkey("2", touche_entrer_2)
+keyboard.add_hotkey("3", touche_entrer_3)
+keyboard.add_hotkey("4", touche_entrer_4)
+keyboard.add_hotkey("5", touche_entrer_5)
+keyboard.add_hotkey("6", touche_entrer_6)
+keyboard.add_hotkey("7", touche_entrer_7)
+keyboard.add_hotkey("8", touche_entrer_8)
+keyboard.add_hotkey("9", touche_entrer_9)
+
+
+
+keyboard.add_hotkey("-", lambda: keyboard.remove_hotkey("f5"))
+
+# On écoute en permanence les touches du clavier
+while True:
+    keyboard.wait()
 
 ################################################################
 
