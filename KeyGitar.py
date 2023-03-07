@@ -30,6 +30,12 @@ try:
     print("pydub est installé et importé correctement.")
 except ImportError:
     print("pydub n'est pas installé ou n'a pas été importé correctement.")
+try:
+    from pydub import AudioSegment
+    import re as sa
+    print("re est installé et importé correctement.")
+except ImportError:
+    print("re n'est pas installé ou n'a pas été importé correctement.")
 print("▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬")
 
 ###############################################
@@ -205,7 +211,8 @@ def profiles_touche():
         touche_profile_choisi = str(touche_profile_choisi)
 
         # Vérification si la chaîne est composée d'un seul caractère alphabétique
-        if len(touche_profile_choisi) == 1 and touche_profile_choisi.isalpha():
+        pattern = r'^[a-zA-Z]+$'
+        if len(touche_profile_choisi) == 1 and touche_profile_choisi.isalpha() and re.match(pattern, touche_profile_choisi):
             touche_profile_choisi = touche_profile_choisi.lower()
             print("La chaîne est un seul caractère alphabétique en minuscules : ", touche_profile_choisi)
             pause = input("PAUSE")
@@ -314,7 +321,7 @@ def profiles_Creation_csv():
 
 
 # Pour test
-profiles()
+profiles_touche()
 
 
 
