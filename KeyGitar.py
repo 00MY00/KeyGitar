@@ -324,8 +324,6 @@ def profiles_touche():
 # Detection des touches
 def capteur_entree():
     pygame.init()
-    screen = pygame.display.set_mode((200, 200))
-    pygame.display.set_caption("Pygame Keyboard Input")
     
     while True:
         for event in pygame.event.get():
