@@ -46,6 +46,7 @@ Racine = os.getcwd()
 
 # Pour entrer dans le répertoire son
 RepTemporaire = Racine + "/son/"
+RepTemporaireProfil = Racine + "/Profiles/"
 
 ###############################################
 # Convertion des fichier audio en 'WAV'
@@ -203,8 +204,8 @@ def profiles_sond(lettre):
 
 def profiles_Creation_csv(nom, lettre, path):
 
-    # Le nom du fichier CSV sera la valeur de la lettre suivie de ".csv"
-    file_name = "Profile_" + nom.lower() + ".csv"
+    # Le nom du fichier CSV sera Profile_ + la valeur de la lettre suivie de ".csv"
+    file_name = RepTemporaireProfil + "Profile_" + nom.lower() + ".csv"
 
     # Verification ci le fichier existe déja
     if os.path.isfile(file_name):
@@ -275,36 +276,6 @@ def profiles_Creation_csv(nom, lettre, path):
                 writer.writerow(row)
         print("Ajout de : ", profile_Csv[lettre])
 
-    # Définition des données pour le CSV
-    profile_Csv = [
-        ['Letter', 'Value'],
-        ['q', "{Touche_q}"],
-        ['w', "{Touche_w}"],
-        ['e', "{Touche_e}"]
-        ['r', "{Touche_r}"]
-        ['t', "{Touche_t}"]
-        ['z', "{Touche_z}"]
-        ['u', "{Touche_u}"]
-        ['i', "{Touche_i}"]
-        ['o', "{Touche_o}"]
-        ['p', "{Touche_p}"]
-        ['a', "{Touche_a}"]
-        ['s', "{Touche_s}"]
-        ['d', "{Touche_d}"]
-        ['f', "{Touche_f}"]
-        ['g', "{Touche_g}"]
-        ['h', "{Touche_h}"]
-        ['j', "{Touche_j}"]
-        ['k', "{Touche_k}"]
-        ['l', "{Touche_l}"]
-        ['y', "{Touche_y}"]
-        ['x', "{Touche_x}"]
-        ['c', "{Touche_c}"]
-        ['v', "{Touche_v}"]
-        ['b', "{Touche_b}"]
-        ['n', "{Touche_n}"]
-        ['m', "{Touche_m}"]    
-    ]
 
 
 
