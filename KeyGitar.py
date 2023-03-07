@@ -242,53 +242,53 @@ def profiles_touche():
         Touche_m = ""
 
 
-                # Entrées des sond pour les touche affiche les 
-                # deferant clés puis en le selectionent dans 
-                # l'ordre des lettre on indique le quelle de son et a utiliser avec un chiffre
-                # Exemple 
-                # [0] Basse
-                # [1] Choral
-                ###########
-                # Basse
-                # [0] Sond_basse_0
-                # [1] Sond_basse_1
-                ###################
-                # Lettre actuel [Q]
-                ###################
+        # Entrées des sond pour les touche affiche les 
+        # deferant clés puis en le selectionent dans 
+        # l'ordre des lettre on indique le quelle de son et a utiliser avec un chiffre
+        # Exemple 
+        # [0] Basse
+        # [1] Choral
+        ###########
+        # Basse
+        # [0] Sond_basse_0
+        # [1] Sond_basse_1
+        ###################
+        # Lettre actuel [Q]
+        ###################
 
                 
 
-
-                # Définition des données pour le CSV
-            profile_Csv = [
-                    ['Letter', 'Value'],
-                    ['q', "{Touche_q}"],
-                    ['w', "{Touche_w}"],
-                    ['e', "{Touche_e}"]
-                    ['r', "{Touche_r}"]
-                    ['t', "{Touche_t}"]
-                    ['z', "{Touche_z}"]
-                    ['u', "{Touche_u}"]
-                    ['i', "{Touche_i}"]
-                    ['o', "{Touche_o}"]
-                    ['p', "{Touche_p}"]
-                    ['a', "{Touche_a}"]
-                    ['s', "{Touche_s}"]
-                    ['d', "{Touche_d}"]
-                    ['f', "{Touche_f}"]
-                    ['g', "{Touche_g}"]
-                    ['h', "{Touche_h}"]
-                    ['j', "{Touche_j}"]
-                    ['k', "{Touche_k}"]
-                    ['l', "{Touche_l}"]
-                    ['y', "{Touche_y}"]
-                    ['x', "{Touche_x}"]
-                    ['c', "{Touche_c}"]
-                    ['v', "{Touche_v}"]
-                    ['b', "{Touche_b}"]
-                    ['n', "{Touche_n}"]
-                    ['m', "{Touche_m}"]    
-                ]
+def profiles_Creation_csv():
+    # Définition des données pour le CSV
+    profile_Csv = [
+        ['Letter', 'Value'],
+        ['q', "{Touche_q}"],
+        ['w', "{Touche_w}"],
+        ['e', "{Touche_e}"]
+        ['r', "{Touche_r}"]
+        ['t', "{Touche_t}"]
+        ['z', "{Touche_z}"]
+        ['u', "{Touche_u}"]
+        ['i', "{Touche_i}"]
+        ['o', "{Touche_o}"]
+        ['p', "{Touche_p}"]
+        ['a', "{Touche_a}"]
+        ['s', "{Touche_s}"]
+        ['d', "{Touche_d}"]
+        ['f', "{Touche_f}"]
+        ['g', "{Touche_g}"]
+        ['h', "{Touche_h}"]
+        ['j', "{Touche_j}"]
+        ['k', "{Touche_k}"]
+        ['l', "{Touche_l}"]
+        ['y', "{Touche_y}"]
+        ['x', "{Touche_x}"]
+        ['c', "{Touche_c}"]
+        ['v', "{Touche_v}"]
+        ['b', "{Touche_b}"]
+        ['n', "{Touche_n}"]
+        ['m', "{Touche_m}"]    
+    ]
 
 
 
