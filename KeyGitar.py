@@ -289,6 +289,7 @@ def profiles_Creation_csv(nom, lettre, path):
 # Fonction à appeler pour Profile
 def profiles_touche():
     while True:
+        Profile_lettre = ''
         os.system('clear')
         if getattr(Profile_lettre, 'strip', lambda: '')():
             print("Nom du Profile précédemment utilisé : ", Profile_lettre)
