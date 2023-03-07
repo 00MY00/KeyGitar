@@ -291,9 +291,6 @@ def profiles_Creation_csv(nom, lettre, path):
         print("Ajout de : ", profile_Csv, "à", lettre)
 
 
-
-
-
 def profiles_touche():
     while True:
         os.system('clear')
@@ -326,37 +323,6 @@ def profiles_touche():
             print("La chaîne n'est pas valide.")
 
 
-        
-
-
-        # Entrées des sond pour les touche affiche les 
-        # deferant clés puis en le selectionent dans 
-        # l'ordre des lettre on indique le quelle de son et a utiliser avec un chiffre
-        # Exemple 
-        # [0] Basse
-        # [1] Choral
-        ###########
-        # Basse
-        # [0] Sond_basse_0
-        # [1] Sond_basse_1
-        ###################
-        # Lettre actuel [Q]
-        ###################
-
-                
-
-
-
-
-
-    # Creation et ouverture du fichier en mode écriture
-    with open(f'Profil_{Profile_Name}.csv', mode='w', newline='') as fichier_csv:
-        # Création d'un objet writer
-        writer = csv.writer(fichier_csv, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-
-        # Écriture des données
-        for ligne in profile_Csv:
-            writer.writerow(ligne)
 
 
 
