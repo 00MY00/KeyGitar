@@ -182,6 +182,7 @@ def profiles():
                 print("Repertoire Temporaire : ", RepTemporaire)
                 print("Dossier de Sond: ", All_rep[Profile_curent_repertoir])
                 print("Fichier Sond selectioner : ", x[All_rep[Profile_curent_repertoir]][Profile_sond_atribution])
+                print("Chemin : ", RepTemporaire + All_rep[Profile_curent_repertoir] + "/" + x[All_rep[Profile_curent_repertoir]][Profile_sond_atribution])
 
                 # Test ci la valeur existe
                 #if Profile_sond_atribution in x.All_rep[Profile_curent_repertoir]:
