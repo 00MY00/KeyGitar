@@ -322,18 +322,12 @@ def profiles_touche():
 ############################################################ FIN PROFIL
 
 # Detection des touches
+
 def capteur_entree():
-    pygame.init()
-    
     while True:
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                pygame.quit()
-                return
-            
-            if event.type == pygame.KEYDOWN:
-                key_name = pygame.key.name(event.key)
-                print("Touche entrée : ", key_name)
+        event = keyboard.read_event()
+        if event.event_type == "down":
+            print("Touche entrée : ", event.name)
 
 ############################################################ FIN DETECTION DE TOUCHE
 
