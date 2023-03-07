@@ -210,12 +210,13 @@ def profiles_Creation_csv(nom, lettre, path):
 
     # Verification ci le fichier existe déja
     if os.path.isfile(file_name):
-        print("existe")
+        print("Le fichier existe")
+        # ci le fichier csv existe récuperation du contenu dans profile_Csv
         with open(file_name, newline='') as csvfile:
             reader = csv.reader(csvfile)
             profile_Csv = list(reader)
         
-        # Ajoute le nouveau chemin
+        # Ajoute le nouveau valeur a la clé
         profile_Csv[lettre] = path
 
         # Ouverture du fichier en mode écriture avec l'encodage UTF-8
@@ -227,12 +228,17 @@ def profiles_Creation_csv(nom, lettre, path):
             # Écriture des données dans le fichier
             for row in profile_Csv:
                 writer.writerow(row)
+        # Affichage de la donnée ajoutée
+        os.system('clear')
         print("Ajout de : ", profile_Csv[lettre])
-
+        
+    # Le fichier n'existe pas encore
     else:
+        # Verifit ci la variable profile_Csv existe ci non la crée
         if 'profile_Csv' in locals():
             print("La variable existe !")
         else:
+            # Creation de la variable profile_Csv
             profile_Csv = [
             ['Letter', 'Value'],
             ['q', "Vide"],
@@ -261,7 +267,7 @@ def profiles_Creation_csv(nom, lettre, path):
             ['b', "Vide"]
             ['n', "Vide"]
             ['m', "Vide"]    
-        ]
+            ]
 
         # Ajoute le nouveau chemin
         profile_Csv[lettre] = path
@@ -275,6 +281,8 @@ def profiles_Creation_csv(nom, lettre, path):
             # Écriture des données dans le fichier
             for row in profile_Csv:
                 writer.writerow(row)
+        # Affichage de la valeur ajoutée
+        os.system('clear')
         print("Ajout de : ", profile_Csv[lettre])
 
 
