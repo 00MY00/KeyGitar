@@ -490,6 +490,7 @@ keyboard.add_hotkey("-", lambda: keyboard.remove_hotkey("f5"))
 
 # On écoute en permanence les touches du clavier
 while True:
+    print("Keyboard")
     event = keyboard.read_event()
     if event.name == 'up':
         print('Flèche du haut pressée')
