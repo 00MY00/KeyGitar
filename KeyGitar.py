@@ -308,6 +308,7 @@ def profiles_touche():
         touche_profile_choisi = input(": ")
         touche_profile_choisi = str(touche_profile_choisi)
         if touche_profile_choisi == "xx":
+            touche_profile_choisi = ''
             break
 
         # Vérification si la chaîne est composée d'un seul caractère alphabétique
