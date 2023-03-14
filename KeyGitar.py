@@ -450,7 +450,7 @@ def touche_entrer_0():
     os.system('clear')
     print("Tu as entré 0")
     filename = 'Profile_0.csv'
-
+    filename = "Profiles/" + filename
     if os.path.isfile(filename):
         profile = {}
         with open(filename, 'r') as f:
