@@ -8,8 +8,7 @@ ping www.google.ch -c 1
 if [ $? -eq 0 ];
 then
     echo -e "OK ping réusit !"
-    apt install net-tools
-    ifconfig eth0 down
+    sudo ifconfig eth0 down
 fi
 
 apt update -y 
@@ -26,7 +25,7 @@ then
     echo -e "OK upgrade réusit !"
 fi
 
-ifconfig eth0 up
+sudo ifconfig eth0 up
 
 
 
@@ -34,11 +33,11 @@ echo "interface wlan0" > "/etc/dhcpcd.conf"
 echo "static ip_address=192.168.0.1/24" >> "/etc/dhcpcd.conf"
 echo "nohook wpa_supplicant" >> "/etc/dhcpcd.conf"
 
-rfkill unblock 0
+sudo rfkill unblock 0
 
 
-apt install dnsmasq -y
-apt install hostapd -y
+sudo apt-get install dnsmasq -y
+sudo apt-get install hostapd -y
 echo "######################################" > "/etc/dnsmasq.conf"
 ######################################
 # changement dans le fichier de configuration "/etc/dnsmasq.conf" 
@@ -75,17 +74,18 @@ DAEMON_CONF="/etc/hostapd/hostapd.conf"
 
 # On (re)démarre le serveur dhcp :
 
-systemctl restart dnsmasq
+sudo systemctl restart dnsmasq
 # On active le service hostapd :
 
-systemctl unmask hostapd
-systemctl enable hostapd
-systemctl start hostapd
+sudo systemctl unmask hostapd
+sudo systemctl enable hostapd
+sudo systemctl start hostapd
 
 
 # Afficher Logs
 cat /var/log/syslog
 
+exit
 ###################################################################################################################
 
 Non, vous n'êtes pas obligé d'utiliser une API pour contrôler une bande LED WiFi avec Python. Vous pouvez également utiliser des bibliothèques telles que "socket" pour communiquer directement avec le dispositif via un protocole de communication spécifique (comme UDP ou TCP).
