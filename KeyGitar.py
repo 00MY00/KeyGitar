@@ -340,111 +340,161 @@ def profiles_touche():
 
 
 def touche_entrer_a():
+    os.system('clear')
     print("Tu as entré a")
 
 def touche_entrer_b():
+    os.system('clear')
     print("Tu as entré b")
 
 def touche_entrer_c():
+    os.system('clear')
     print("Tu as entré c")
 
 def touche_entrer_d():
+    os.system('clear')
     print("Tu as entré d")
 
 def touche_entrer_e():
+    os.system('clear')
     print("Tu as entré e")
 
 def touche_entrer_f():
+    os.system('clear')
     print("Tu as entré f")
 
 def touche_entrer_g():
+    os.system('clear')
     print("Tu as entré g")
 
 def touche_entrer_h():
+    os.system('clear')
     print("Tu as entré h")
 
 def touche_entrer_i():
+    os.system('clear')
     print("Tu as entré i")
 
 def touche_entrer_j():
+    os.system('clear')
     print("Tu as entré j")
 
 def touche_entrer_k():
+    os.system('clear')
     print("Tu as entré k")
 
 def touche_entrer_l():
+    os.system('clear')
     print("Tu as entré l")
 
 def touche_entrer_m():
+    os.system('clear')
     print("Tu as entré m")
 
 def touche_entrer_n():
+    os.system('clear')
     print("Tu as entré n")
 
 def touche_entrer_o():
+    os.system('clear')
     print("Tu as entré o")
 
 def touche_entrer_p():
+    os.system('clear')
     print("Tu as entré p")
 
 def touche_entrer_q():
+    os.system('clear')
     print("Tu as entré q")
 
 def touche_entrer_r():
+    os.system('clear')
     print("Tu as entré r")
 
 def touche_entrer_s():
+    os.system('clear')
     print("Tu as entré s")
 
 def touche_entrer_t():
+    os.system('clear')
     print("Tu as entré t")
 
 def touche_entrer_u():
+    os.system('clear')
     print("Tu as entré u")
 
 def touche_entrer_v():
+    os.system('clear')
     print("Tu as entré v")
 
 def touche_entrer_w():
+    os.system('clear')
     print("Tu as entré w")
 
 def touche_entrer_x():
+    os.system('clear')
     print("Tu as entré x")
 
 def touche_entrer_y():
+    os.system('clear')
     print("Tu as entré y")
 
 def touche_entrer_z():
+    os.system('clear')
     print("Tu as entré z")
 
 def touche_entrer_0():
+    os.system('clear')
     print("Tu as entré 0")
+    filename = 'Profile_0.csv'
+
+    if os.path.isfile(filename):
+        profile = {}
+        with open(filename, 'r') as f:
+            # Lire le contenu du fichier et le stocker dans le dictionnaire 'profile'
+            for line in f:
+                key, value = line.strip().split(',')
+                profile[key] = value
+            print("_________ CONTENU CSV")
+            print(profile)
+            print("_________")
+    else:
+        print(f"Le fichier {filename} n'existe pas.")
 
 def touche_entrer_1():
+    os.system('clear')
     print("Tu as entré 1")
 
 def touche_entrer_2():
+    os.system('clear')
     print("Tu as entré 2")
 
 def touche_entrer_3():
+    os.system('clear')
     print("Tu as entré 3")
 
 def touche_entrer_4():
+    os.system('clear')
     print("Tu as entré 4")
 
 def touche_entrer_5():
+    os.system('clear')
     print("Tu as entré 5")
 
 def touche_entrer_6():
+    os.system('clear')
     print("Tu as entré 6")
 
 def touche_entrer_7():
+    os.system('clear')
     print("Tu as entré 7")
 
 def touche_entrer_8():
+    os.system('clear')
     print("Tu as entré 8")
 
 def touche_entrer_9():
+    os.system('clear')
     print("Tu as entré 9")
 
 keyboard.add_hotkey("a", touche_entrer_a)
