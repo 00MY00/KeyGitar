@@ -510,6 +510,7 @@ def touche_entrer_z():
     print(get_value('z'))
 
 def touche_entrer_0():
+    global profile_globale
     os.system('clear')
     print("Tu as entré 0")
     filename = 'Profile_0.csv'
