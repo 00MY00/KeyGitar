@@ -383,6 +383,11 @@ def touche_entrer_a():
     os.system('clear')
     print("Tu as entré a")
     print(get_value('a'))
+    pygame.init()
+    pygame.mixer.init()
+
+    pygame.mixer.music.load(get_value('a'))
+    pygame.mixer.music.play(-1)
 
 def touche_entrer_b():
     os.system('clear')
