@@ -686,40 +686,184 @@ def touche_entrer_0():
         print(f"Le fichier {filename} n'existe pas.")
 
 def touche_entrer_1():
+    global profile_globale
     os.system('clear')
     print("Tu as entré 1")
+    filename = 'Profile_1.csv'
+    filepath = os.path.join('Profiles', filename)
+    
+    if os.path.isfile(filepath):
+        profile_globale = {}
+        with open(filepath, 'r') as f:
+            # Lire le contenu du fichier et le stocker dans le dictionnaire 'profile'
+            for line in f:
+                key, value = line.strip().split(',')
+                profile_globale[key] = value
+            print("_________ CONTENU CSV")
+            print(profile_globale)
+            print("_________")
+    else:
+        print(f"Le fichier {filename} n'existe pas.")
 
 def touche_entrer_2():
+    global profile_globale
     os.system('clear')
     print("Tu as entré 2")
+    filename = 'Profile_2.csv'
+    filepath = os.path.join('Profiles', filename)
+    
+    if os.path.isfile(filepath):
+        profile_globale = {}
+        with open(filepath, 'r') as f:
+            # Lire le contenu du fichier et le stocker dans le dictionnaire 'profile'
+            for line in f:
+                key, value = line.strip().split(',')
+                profile_globale[key] = value
+            print("_________ CONTENU CSV")
+            print(profile_globale)
+            print("_________")
+    else:
+        print(f"Le fichier {filename} n'existe pas.")
 
 def touche_entrer_3():
+    global profile_globale
     os.system('clear')
     print("Tu as entré 3")
+    filename = 'Profile_3.csv'
+    filepath = os.path.join('Profiles', filename)
+    
+    if os.path.isfile(filepath):
+        profile_globale = {}
+        with open(filepath, 'r') as f:
+            # Lire le contenu du fichier et le stocker dans le dictionnaire 'profile'
+            for line in f:
+                key, value = line.strip().split(',')
+                profile_globale[key] = value
+            print("_________ CONTENU CSV")
+            print(profile_globale)
+            print("_________")
+    else:
+        print(f"Le fichier {filename} n'existe pas.")
 
 def touche_entrer_4():
+    global profile_globale
     os.system('clear')
     print("Tu as entré 4")
+    filename = 'Profile_4.csv'
+    filepath = os.path.join('Profiles', filename)
+    
+    if os.path.isfile(filepath):
+        profile_globale = {}
+        with open(filepath, 'r') as f:
+            # Lire le contenu du fichier et le stocker dans le dictionnaire 'profile'
+            for line in f:
+                key, value = line.strip().split(',')
+                profile_globale[key] = value
+            print("_________ CONTENU CSV")
+            print(profile_globale)
+            print("_________")
+    else:
+        print(f"Le fichier {filename} n'existe pas.")
 
 def touche_entrer_5():
+    global profile_globale
     os.system('clear')
     print("Tu as entré 5")
+    filename = 'Profile_5.csv'
+    filepath = os.path.join('Profiles', filename)
+    
+    if os.path.isfile(filepath):
+        profile_globale = {}
+        with open(filepath, 'r') as f:
+            # Lire le contenu du fichier et le stocker dans le dictionnaire 'profile'
+            for line in f:
+                key, value = line.strip().split(',')
+                profile_globale[key] = value
+            print("_________ CONTENU CSV")
+            print(profile_globale)
+            print("_________")
+    else:
+        print(f"Le fichier {filename} n'existe pas.")
 
 def touche_entrer_6():
+    global profile_globale
     os.system('clear')
     print("Tu as entré 6")
+    filename = 'Profile_6.csv'
+    filepath = os.path.join('Profiles', filename)
+    
+    if os.path.isfile(filepath):
+        profile_globale = {}
+        with open(filepath, 'r') as f:
+            # Lire le contenu du fichier et le stocker dans le dictionnaire 'profile'
+            for line in f:
+                key, value = line.strip().split(',')
+                profile_globale[key] = value
+            print("_________ CONTENU CSV")
+            print(profile_globale)
+            print("_________")
+    else:
+        print(f"Le fichier {filename} n'existe pas.")
 
 def touche_entrer_7():
+    global profile_globale
     os.system('clear')
     print("Tu as entré 7")
+    filename = 'Profile_7.csv'
+    filepath = os.path.join('Profiles', filename)
+    
+    if os.path.isfile(filepath):
+        profile_globale = {}
+        with open(filepath, 'r') as f:
+            # Lire le contenu du fichier et le stocker dans le dictionnaire 'profile'
+            for line in f:
+                key, value = line.strip().split(',')
+                profile_globale[key] = value
+            print("_________ CONTENU CSV")
+            print(profile_globale)
+            print("_________")
+    else:
+        print(f"Le fichier {filename} n'existe pas.")
 
 def touche_entrer_8():
+    global profile_globale
     os.system('clear')
     print("Tu as entré 8")
+    filename = 'Profile_8.csv'
+    filepath = os.path.join('Profiles', filename)
+    
+    if os.path.isfile(filepath):
+        profile_globale = {}
+        with open(filepath, 'r') as f:
+            # Lire le contenu du fichier et le stocker dans le dictionnaire 'profile'
+            for line in f:
+                key, value = line.strip().split(',')
+                profile_globale[key] = value
+            print("_________ CONTENU CSV")
+            print(profile_globale)
+            print("_________")
+    else:
+        print(f"Le fichier {filename} n'existe pas.")
 
 def touche_entrer_9():
+    global profile_globale
     os.system('clear')
     print("Tu as entré 9")
+    filename = 'Profile_9.csv'
+    filepath = os.path.join('Profiles', filename)
+    
+    if os.path.isfile(filepath):
+        profile_globale = {}
+        with open(filepath, 'r') as f:
+            # Lire le contenu du fichier et le stocker dans le dictionnaire 'profile'
+            for line in f:
+                key, value = line.strip().split(',')
+                profile_globale[key] = value
+            print("_________ CONTENU CSV")
+            print(profile_globale)
+            print("_________")
+    else:
+        print(f"Le fichier {filename} n'existe pas.")
 
 def exitt(key):
     if key.name == '-':
