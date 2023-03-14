@@ -340,40 +340,41 @@ def profiles_touche():
 ###############################################
 # Boucle While True 
 # Définition du tableau globale profile pour les touches
-profile_globale = [
-            ['q', "Vide"],
-            ['w', "Vide"],
-            ['e', "Vide"],
-            ['r', "Vide"],
-            ['t', "Vide"],
-            ['z', "Vide"],
-            ['u', "Vide"],
-            ['i', "Vide"],
-            ['o', "Vide"],
-            ['p', "Vide"],
-            ['a', "Vide"],
-            ['s', "Vide"],
-            ['d', "Vide"],
-            ['f', "Vide"],
-            ['g', "Vide"],
-            ['h', "Vide"],
-            ['j', "Vide"],
-            ['k', "Vide"],
-            ['l', "Vide"],
-            ['y', "Vide"],
-            ['x', "Vide"],
-            ['c', "Vide"],
-            ['v', "Vide"],
-            ['b', "Vide"],
-            ['n', "Vide"],
-            ['m', "Vide"],   
-            ]
+profile_globale = {
+    'q': "Vide",
+    'w': "Vide",
+    'e': "Vide",
+    'r': "Vide",
+    't': "Vide",
+    'z': "Vide",
+    'u': "Vide",
+    'i': "Vide",
+    'o': "Vide",
+    'p': "Vide",
+    'a': "Vide",
+    's': "Vide",
+    'd': "Vide",
+    'f': "Vide",
+    'g': "Vide",
+    'h': "Vide",
+    'j': "Vide",
+    'k': "Vide",
+    'l': "Vide",
+    'y': "Vide",
+    'x': "Vide",
+    'c': "Vide",
+    'v': "Vide",
+    'b': "Vide",
+    'n': "Vide",
+    'm': "Vide",
+}
 
-def get_value(key): # Permet de récupérer le contenu de profile_globale
-    for elem in profile_globale:
-        if elem[0] == key:
-            return elem[1]
-    return None
+
+def get_value(key): # Permet de récupérer le contenu de profile
+    if key in profile_globale:
+        return profile_globale[key]
+    else:
+        return None
 
 
 
@@ -515,14 +516,14 @@ def touche_entrer_0():
     filepath = os.path.join('Profiles', filename)
     
     if os.path.isfile(filepath):
-        profile = {}
+        profile_globale = {}
         with open(filepath, 'r') as f:
             # Lire le contenu du fichier et le stocker dans le dictionnaire 'profile'
             for line in f:
                 key, value = line.strip().split(',')
                 profile_globale[key] = value
             print("_________ CONTENU CSV")
-            print(profile)
+            print(profile_globale)
             print("_________")
     else:
         print(f"Le fichier {filename} n'existe pas.")
