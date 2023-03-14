@@ -384,286 +384,392 @@ def touche_entrer_a():
     print("Tu as entré a")
     print(get_value('a'))
     if get_value('a') != "Vide":
-        pygame.init() # ci variable pas vide !
-        pygame.mixer.init()
+        if actf_a != 1:
+            pygame.init() # ci variable pas vide !
+            pygame.mixer.init()
 
-        sona = pygame.mixer.Sound(get_value('a'))
-        sona.play(-1)
+            sona = pygame.mixer.Sound(get_value('a'))
+            sona.play(-1)
+            actf_a = 1
+        else:   # Stope le sont ci actiffe
+            sona.stop()
 
 def touche_entrer_b():
     os.system('clear')
     print("Tu as entré b")
     print(get_value('b'))
     if get_value('b') != "Vide":
-        pygame.init() # ci variable pas vide !
-        pygame.mixer.init()
+        if actf_b != 1:
+            pygame.init() # ci variable pas vide !
+            pygame.mixer.init()
 
-        sonb = pygame.mixer.Sound(get_value('b'))
-        sonb.play(-1)
+            sonb = pygame.mixer.Sound(get_value('b'))
+            sonb.play(-1)
+            actf_b = 1
+        else:   # Stope le sont ci actiffe
+            sonb.stop()
 
 def touche_entrer_c():
     os.system('clear')
     print("Tu as entré c")
     print(get_value('c'))
     if get_value('c') != "Vide":
-        pygame.init() # ci variable pas vide !
-        pygame.mixer.init()
+        if actf_c != 1:
+            pygame.init() # ci variable pas vide !
+            pygame.mixer.init()
 
-        sonc = pygame.mixer.Sound(get_value('c'))
-        sonc.play(-1)
+            sonc = pygame.mixer.Sound(get_value('c'))
+            sonc.play(-1)
+            actf_c = 1
+        else:   # Stope le sont ci actiffe
+            sonc.stop()
 
 def touche_entrer_d():
     os.system('clear')
     print("Tu as entré d")
     print(get_value('d'))
     if get_value('d') != "Vide":
-        pygame.init() # ci variable pas vide !
-        pygame.mixer.init()
+        if actf_d != 1:
+            pygame.init() # ci variable pas vide !
+            pygame.mixer.init()
 
-        sond = pygame.mixer.Sound(get_value('d'))
-        sond.play(-1)
+            sond = pygame.mixer.Sound(get_value('d'))
+            sond.play(-1)
+            actf_d = 1
+        else:   # Stope le sont ci actiffe
+            sond.stop()
 
 def touche_entrer_e():
     os.system('clear')
     print("Tu as entré e")
     print(get_value('e'))
     if get_value('e') != "Vide":
-        pygame.init() # ci variable pas vide !
-        pygame.mixer.init()
+        if actf_e != 1:
+            pygame.init() # ci variable pas vide !
+            pygame.mixer.init()
 
-        sone = pygame.mixer.Sound(get_value('e'))
-        sone.play(-1)
+            sone = pygame.mixer.Sound(get_value('e'))
+            sone.play(-1)
+            actf_e = 1
+        else:   # Stope le sont ci actiffe
+            sone.stop()
 
 def touche_entrer_f():
     os.system('clear')
     print("Tu as entré f")
     print(get_value('f'))
     if get_value('f') != "Vide":
-        pygame.init() # ci variable pas vide !
-        pygame.mixer.init()
+        if actf_f != 1:
+            pygame.init() # ci variable pas vide !
+            pygame.mixer.init()
 
-        sonf = pygame.mixer.Sound(get_value('f'))
-        sonf.play(-1)
+            sonf = pygame.mixer.Sound(get_value('f'))
+            sonf.play(-1)
+            actf_f = 1
+        else:   # Stope le sont ci actiffe
+            sonf.stop()
 
 def touche_entrer_g():
     os.system('clear')
     print("Tu as entré g")
     print(get_value('g'))
     if get_value('g') != "Vide":
-        pygame.init() # ci variable pas vide !
-        pygame.mixer.init()
+        if actf_g != 1:
+            pygame.init() # ci variable pas vide !
+            pygame.mixer.init()
 
-        song = pygame.mixer.Sound(get_value('g'))
-        song.play(-1)
+            song = pygame.mixer.Sound(get_value('g'))
+            song.play(-1)
+            actf_g = 1
+        else:   # Stope le sont ci actiffe
+            song.stop()
 
 def touche_entrer_h():
     os.system('clear')
     print("Tu as entré h")
     print(get_value('h'))
     if get_value('h') != "Vide":
-        pygame.init() # ci variable pas vide !
-        pygame.mixer.init()
+        if actf_h != 1:
+            pygame.init() # ci variable pas vide !
+            pygame.mixer.init()
 
-        sonh = pygame.mixer.Sound(get_value('h'))
-        sonh.play(-1)
+            sonh = pygame.mixer.Sound(get_value('h'))
+            sonh.play(-1)
+            actf_h = 1
+        else:   # Stope le sont ci actiffe
+            sonh.stop()
 
 def touche_entrer_i():
     os.system('clear')
     print("Tu as entré i")
     print(get_value('i'))
     if get_value('i') != "Vide":
-        pygame.init() # ci variable pas vide !
-        pygame.mixer.init()
+        if actf_i != 1:
+            pygame.init() # ci variable pas vide !
+            pygame.mixer.init()
 
-        soni = pygame.mixer.Sound(get_value('i'))
-        soni.play(-1)
+            soni = pygame.mixer.Sound(get_value('i'))
+            soni.play(-1)
+            actf_i = 1
+        else:   # Stope le sont ci actiffe
+            soni.stop()
 
 def touche_entrer_j():
     os.system('clear')
     print("Tu as entré j")
     print(get_value('j'))
     if get_value('j') != "Vide":
-        pygame.init() # ci variable pas vide !
-        pygame.mixer.init()
+        if actf_j != 1:
+            pygame.init() # ci variable pas vide !
+            pygame.mixer.init()
 
-        sonj = pygame.mixer.Sound(get_value('j'))
-        sonj.play(-1)
+            sonj = pygame.mixer.Sound(get_value('j'))
+            sonj.play(-1)
+            actf_j = 1
+        else:   # Stope le sont ci actiffe
+            sonj.stop()
 
 def touche_entrer_k():
     os.system('clear')
     print("Tu as entré k")
     print(get_value('k'))
     if get_value('k') != "Vide":
-        pygame.init() # ci variable pas vide !
-        pygame.mixer.init()
+        if actf_k != 1:
+            pygame.init() # ci variable pas vide !
+            pygame.mixer.init()
 
-        sonk = pygame.mixer.Sound(get_value('k'))
-        sonk.play(-1)
+            sonk = pygame.mixer.Sound(get_value('k'))
+            sonk.play(-1)
+            actf_k = 1
+        else:   # Stope le sont ci actiffe
+            sonk.stop()
 
 def touche_entrer_l():
     os.system('clear')
     print("Tu as entré l")
     print(get_value('l'))
     if get_value('l') != "Vide":
-        pygame.init() # ci variable pas vide !
-        pygame.mixer.init()
+        if actf_l != 1:
+            pygame.init() # ci variable pas vide !
+            pygame.mixer.init()
 
-        sonl = pygame.mixer.Sound(get_value('l'))
-        sonl.play(-1)
+            sonl = pygame.mixer.Sound(get_value('l'))
+            sonl.play(-1)
+            actf_l = 1
+        else:   # Stope le sont ci actiffe
+            sonl.stop()
 
 def touche_entrer_m():
     os.system('clear')
     print("Tu as entré m")
     print(get_value('m'))
     if get_value('m') != "Vide":
-        pygame.init() # ci variable pas vide !
-        pygame.mixer.init()
+        if actf_m != 1:
+            pygame.init() # ci variable pas vide !
+            pygame.mixer.init()
 
-        sonm = pygame.mixer.Sound(get_value('m'))
-        sonm.play(-1)
+            sonm = pygame.mixer.Sound(get_value('m'))
+            sonm.play(-1)
+            actf_m = 1
+        else:   # Stope le sont ci actiffe
+            sonm.stop()
 
 def touche_entrer_n():
     os.system('clear')
     print("Tu as entré n")
     print(get_value('n'))
     if get_value('n') != "Vide":
-        pygame.init() # ci variable pas vide !
-        pygame.mixer.init()
+        if actf_n != 1:
+            pygame.init() # ci variable pas vide !
+            pygame.mixer.init()
 
-        sonn = pygame.mixer.Sound(get_value('n'))
-        sonn.play(-1)
+            sonn = pygame.mixer.Sound(get_value('n'))
+            sonn.play(-1)
+            actf_n = 1
+        else:   # Stope le sont ci actiffe
+            sonn.stop()
 
 def touche_entrer_o():
     os.system('clear')
     print("Tu as entré o")
     print(get_value('o'))
     if get_value('o') != "Vide":
-        pygame.init() # ci variable pas vide !
-        pygame.mixer.init()
+        if actf_o != 1:
+            pygame.init() # ci variable pas vide !
+            pygame.mixer.init()
 
-        sono = pygame.mixer.Sound(get_value('o'))
-        sono.play(-1)
+            sono = pygame.mixer.Sound(get_value('o'))
+            sono.play(-1)
+            actf_o = 1
+        else:   # Stope le sont ci actiffe
+            sono.stop()
 
 def touche_entrer_p():
     os.system('clear')
     print("Tu as entré p")
     print(get_value('p'))
     if get_value('p') != "Vide":
-        pygame.init() # ci variable pas vide !
-        pygame.mixer.init()
+        if actf_p != 1:
+            pygame.init() # ci variable pas vide !
+            pygame.mixer.init()
 
-        sonp = pygame.mixer.Sound(get_value('p'))
-        sonp.play(-1)
+            sonp = pygame.mixer.Sound(get_value('p'))
+            sonp.play(-1)
+            actf_p = 1
+        else:   # Stope le sont ci actiffe
+            sonp.stop()
 
 def touche_entrer_q():
     os.system('clear')
     print("Tu as entré q")
     print(get_value('q'))
     if get_value('q') != "Vide":
-        pygame.init() # ci variable pas vide !
-        pygame.mixer.init()
+        if actf_q != 1:
+            pygame.init() # ci variable pas vide !
+            pygame.mixer.init()
 
-        sonq = pygame.mixer.Sound(get_value('q'))
-        sonq.play(-1)
+            sonq = pygame.mixer.Sound(get_value('q'))
+            sonq.play(-1)
+            actf_q = 1
+        else:   # Stope le sont ci actiffe
+            sonq.stop()
 
 def touche_entrer_r():
     os.system('clear')
     print("Tu as entré r")
     print(get_value('r'))
     if get_value('r') != "Vide":
-        pygame.init() # ci variable pas vide !
-        pygame.mixer.init()
+        if actf_r != 1:
+            pygame.init() # ci variable pas vide !
+            pygame.mixer.init()
 
-        sonr = pygame.mixer.Sound(get_value('r'))
-        sonr.play(-1)
+            sonr = pygame.mixer.Sound(get_value('r'))
+            sonr.play(-1)
+            actf_r = 1
+        else:   # Stope le sont ci actiffe
+            sonr.stop()
 
 def touche_entrer_s():
     os.system('clear')
     print("Tu as entré s")
     print(get_value('s'))
     if get_value('s') != "Vide":
-        pygame.init() # ci variable pas vide !
-        pygame.mixer.init()
+        if actf_s != 1:
+            pygame.init() # ci variable pas vide !
+            pygame.mixer.init()
 
-        sons = pygame.mixer.Sound(get_value('s'))
-        sons.play(-1)
+            sons = pygame.mixer.Sound(get_value('s'))
+            sons.play(-1)
+            actf_s = 1
+        else:   # Stope le sont ci actiffe
+            sons.stop()
 
 def touche_entrer_t():
     os.system('clear')
     print("Tu as entré t")
     print(get_value('t'))
     if get_value('t') != "Vide":
-        pygame.init() # ci variable pas vide !
-        pygame.mixer.init()
+        if actf_t != 1:
+            pygame.init() # ci variable pas vide !
+            pygame.mixer.init()
 
-        sont = pygame.mixer.Sound(get_value('t'))
-        sont.play(-1)
+            sont = pygame.mixer.Sound(get_value('t'))
+            sont.play(-1)
+            actf_t = 1
+        else:   # Stope le sont ci actiffe
+            sont.stop()
 
 def touche_entrer_u():
     os.system('clear')
     print("Tu as entré u")
     print(get_value('u'))
     if get_value('u') != "Vide":
-        pygame.init() # ci variable pas vide !
-        pygame.mixer.init()
+        if actf_u != 1:
+            pygame.init() # ci variable pas vide !
+            pygame.mixer.init()
 
-        sonu = pygame.mixer.Sound(get_value('u'))
-        sonu.play(-1)
+            sonu = pygame.mixer.Sound(get_value('u'))
+            sonu.play(-1)
+            actf_u = 1
+        else:   # Stope le sont ci actiffe
+            sonu.stop()
 
 def touche_entrer_v():
     os.system('clear')
     print("Tu as entré v")
     print(get_value('v'))
     if get_value('v') != "Vide":
-        pygame.init() # ci variable pas vide !
-        pygame.mixer.init()
+        if actf_v != 1:
+            pygame.init() # ci variable pas vide !
+            pygame.mixer.init()
 
-        sonv = pygame.mixer.Sound(get_value('v'))
-        sonv.play(-1)
+            sonv = pygame.mixer.Sound(get_value('v'))
+            sonv.play(-1)
+            actf_v = 1
+        else:   # Stope le sont ci actiffe
+            sonv.stop()
 
 def touche_entrer_w():
     os.system('clear')
     print("Tu as entré w")
     print(get_value('w'))
     if get_value('w') != "Vide":
-        pygame.init() # ci variable pas vide !
-        pygame.mixer.init()
+        if actf_w != 1:
+            pygame.init() # ci variable pas vide !
+            pygame.mixer.init()
 
-        sonw = pygame.mixer.Sound(get_value('w'))
-        sonw.play(-1)
+            sonw = pygame.mixer.Sound(get_value('w'))
+            sonw.play(-1)
+            actf_w = 1
+        else:   # Stope le sont ci actiffe
+            sonw.stop()
 
 def touche_entrer_x():
     os.system('clear')
     print("Tu as entré x")
     print(get_value('x'))
     if get_value('x') != "Vide":
-        pygame.init() # ci variable pas vide !
-        pygame.mixer.init()
+        if actf_x != 1:
+            pygame.init() # ci variable pas vide !
+            pygame.mixer.init()
 
-        sonx = pygame.mixer.Sound(get_value('x'))
-        sonx.play(-1)
+            sonx = pygame.mixer.Sound(get_value('x'))
+            sonx.play(-1)
+            actf_x = 1
+        else:   # Stope le sont ci actiffe
+            sonx.stop()
 
 def touche_entrer_y():
     os.system('clear')
     print("Tu as entré y")
     print(get_value('y'))
     if get_value('y') != "Vide":
-        pygame.init() # ci variable pas vide !
-        pygame.mixer.init()
+        if actf_y != 1:
+            pygame.init() # ci variable pas vide !
+            pygame.mixer.init()
 
-        sony = pygame.mixer.Sound(get_value('y'))
-        sony.play(-1)
+            sony = pygame.mixer.Sound(get_value('y'))
+            sony.play(-1)
+            actf_y = 1
+        else:   # Stope le sont ci actiffe
+            sony.stop()
 
 def touche_entrer_z():
     os.system('clear')
     print("Tu as entré z")
     print(get_value('z'))
     if get_value('z') != "Vide":
-        pygame.init() # ci variable pas vide !
-        pygame.mixer.init()
+        if actf_z != 1:
+            pygame.init() # ci variable pas vide !
+            pygame.mixer.init()
 
-        sonz = pygame.mixer.Sound(get_value('z'))
-        sonz.play(-1)
+            sonz = pygame.mixer.Sound(get_value('z'))
+            sonz.play(-1)
+            actf_z = 1
+        else:   # Stope le sont ci actiffe
+            sonz.stop()
+
+
 
 def touche_entrer_0():
     global profile_globale
