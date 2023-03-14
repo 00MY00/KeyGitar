@@ -31,11 +31,15 @@ try:
 except ImportError:
     print("pydub n'est pas installé ou n'a pas été importé correctement.")
 try:
-    from pydub import AudioSegment
     import re
     print("re est installé et importé correctement.")
 except ImportError:
     print("re n'est pas installé ou n'a pas été importé correctement.")
+try:
+    import sys
+    print("sys est installé et importé correctement.")
+except ImportError:
+    print("sys n'est pas installé ou n'a pas été importé correctement.")
 print("▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬")
 
 ###############################################
@@ -334,117 +338,170 @@ def profiles_touche():
 #----------------------------------------------
 ###############################################
 # Boucle While True 
+# Définition du tableau profile pour les touches
+profile = [
+            ['Letter', 'Value'],
+            ['q', "Vide"],
+            ['w', "Vide"],
+            ['e', "Vide"],
+            ['r', "Vide"],
+            ['t', "Vide"],
+            ['z', "Vide"],
+            ['u', "Vide"],
+            ['i', "Vide"],
+            ['o', "Vide"],
+            ['p', "Vide"],
+            ['a', "Vide"],
+            ['s', "Vide"],
+            ['d', "Vide"],
+            ['f', "Vide"],
+            ['g', "Vide"],
+            ['h', "Vide"],
+            ['j', "Vide"],
+            ['k', "Vide"],
+            ['l', "Vide"],
+            ['y', "Vide"],
+            ['x', "Vide"],
+            ['c', "Vide"],
+            ['v', "Vide"],
+            ['b', "Vide"],
+            ['n', "Vide"],
+            ['m', "Vide"],   
+            ]
 
 
 
-
-# Pour test
-# profiles_touche() # Creation de Profil
 
 
 def touche_entrer_a():
     os.system('clear')
     print("Tu as entré a")
+    print(profile['a'])
 
 def touche_entrer_b():
     os.system('clear')
     print("Tu as entré b")
+    print(profile['b'])
 
 def touche_entrer_c():
     os.system('clear')
     print("Tu as entré c")
+    print(profile['c'])
 
 def touche_entrer_d():
     os.system('clear')
     print("Tu as entré d")
+    print(profile['d'])
 
 def touche_entrer_e():
     os.system('clear')
     print("Tu as entré e")
+    print(profile['e'])
 
 def touche_entrer_f():
     os.system('clear')
     print("Tu as entré f")
+    print(profile['f'])
 
 def touche_entrer_g():
     os.system('clear')
     print("Tu as entré g")
+    print(profile['g'])
 
 def touche_entrer_h():
     os.system('clear')
     print("Tu as entré h")
+    print(profile['h'])
 
 def touche_entrer_i():
     os.system('clear')
     print("Tu as entré i")
+    print(profile['i'])
 
 def touche_entrer_j():
     os.system('clear')
     print("Tu as entré j")
+    print(profile['j'])
 
 def touche_entrer_k():
     os.system('clear')
     print("Tu as entré k")
+    print(profile['k'])
 
 def touche_entrer_l():
     os.system('clear')
     print("Tu as entré l")
+    print(profile['l'])
 
 def touche_entrer_m():
     os.system('clear')
     print("Tu as entré m")
+    print(profile['m'])
 
 def touche_entrer_n():
     os.system('clear')
     print("Tu as entré n")
+    print(profile['n'])
 
 def touche_entrer_o():
     os.system('clear')
     print("Tu as entré o")
+    print(profile['o'])
 
 def touche_entrer_p():
     os.system('clear')
     print("Tu as entré p")
+    print(profile['p'])
 
 def touche_entrer_q():
     os.system('clear')
     print("Tu as entré q")
+    print(profile['q'])
 
 def touche_entrer_r():
     os.system('clear')
     print("Tu as entré r")
+    print(profile['r'])
 
 def touche_entrer_s():
     os.system('clear')
     print("Tu as entré s")
+    print(profile['s'])
 
 def touche_entrer_t():
     os.system('clear')
     print("Tu as entré t")
+    print(profile['t'])
 
 def touche_entrer_u():
     os.system('clear')
     print("Tu as entré u")
+    print(profile['u'])
 
 def touche_entrer_v():
     os.system('clear')
     print("Tu as entré v")
+    print(profile['v'])
 
 def touche_entrer_w():
     os.system('clear')
     print("Tu as entré w")
+    print(profile['w'])
 
 def touche_entrer_x():
     os.system('clear')
     print("Tu as entré x")
+    print(profile['x'])
 
 def touche_entrer_y():
     os.system('clear')
     print("Tu as entré y")
+    print(profile['y'])
 
 def touche_entrer_z():
     os.system('clear')
     print("Tu as entré z")
+    print(profile['z'])
 
 def touche_entrer_0():
     os.system('clear')
@@ -501,6 +558,10 @@ def touche_entrer_9():
     os.system('clear')
     print("Tu as entré 9")
 
+def exitt(key):
+    if key.name == '-':
+        sys.exit()
+
 keyboard.add_hotkey("a", touche_entrer_a)
 keyboard.add_hotkey("b", touche_entrer_b)
 keyboard.add_hotkey("c", touche_entrer_c)
@@ -541,7 +602,7 @@ keyboard.add_hotkey(",", profiles_touche) # Creation de profile
 
 
 
-keyboard.add_hotkey("-", lambda: exit())
+keyboard.add_hotkey('-', exitt)
 
 # On écoute en permanence les touches du clavier
 while True:
