@@ -383,136 +383,287 @@ def touche_entrer_a():
     os.system('clear')
     print("Tu as entré a")
     print(get_value('a'))
-    pygame.init()
-    pygame.mixer.init()
+    if get_value('a') != "Vide":
+        pygame.init() # ci variable pas vide !
+        pygame.mixer.init()
 
-    pygame.mixer.music.load(get_value('a'))
-    pygame.mixer.music.play(-1)
+        pygame.mixer.music.load(get_value('a'))
+        pygame.mixer.music.play(-1)
 
 def touche_entrer_b():
     os.system('clear')
     print("Tu as entré b")
     print(get_value('b'))
+    if get_value('b') != "Vide":
+        pygame.init() # ci variable pas vide !
+        pygame.mixer.init()
+
+        pygame.mixer.music.load(get_value('b'))
+        pygame.mixer.music.play(-1)
 
 def touche_entrer_c():
     os.system('clear')
     print("Tu as entré c")
     print(get_value('c'))
+    if get_value('c') != "Vide":
+        pygame.init() # ci variable pas vide !
+        pygame.mixer.init()
+
+        pygame.mixer.music.load(get_value('c'))
+        pygame.mixer.music.play(-1)
 
 def touche_entrer_d():
     os.system('clear')
     print("Tu as entré d")
     print(get_value('d'))
+    if get_value('d') != "Vide":
+        pygame.init() # ci variable pas vide !
+        pygame.mixer.init()
+
+        pygame.mixer.music.load(get_value('d'))
+        pygame.mixer.music.play(-1)
 
 def touche_entrer_e():
     os.system('clear')
     print("Tu as entré e")
     print(get_value('e'))
+    if get_value('e') != "Vide":
+        pygame.init() # ci variable pas vide !
+        pygame.mixer.init()
+
+        pygame.mixer.music.load(get_value('e'))
+        pygame.mixer.music.play(-1)
 
 def touche_entrer_f():
     os.system('clear')
     print("Tu as entré f")
     print(get_value('f'))
+    if get_value('f') != "Vide":
+        pygame.init() # ci variable pas vide !
+        pygame.mixer.init()
+
+        pygame.mixer.music.load(get_value('f'))
+        pygame.mixer.music.play(-1)
 
 def touche_entrer_g():
     os.system('clear')
     print("Tu as entré g")
     print(get_value('g'))
+    if get_value('g') != "Vide":
+        pygame.init() # ci variable pas vide !
+        pygame.mixer.init()
+
+        pygame.mixer.music.load(get_value('g'))
+        pygame.mixer.music.play(-1)
 
 def touche_entrer_h():
     os.system('clear')
     print("Tu as entré h")
     print(get_value('h'))
+    if get_value('h') != "Vide":
+        pygame.init() # ci variable pas vide !
+        pygame.mixer.init()
+
+        pygame.mixer.music.load(get_value('h'))
+        pygame.mixer.music.play(-1)
 
 def touche_entrer_i():
     os.system('clear')
     print("Tu as entré i")
     print(get_value('i'))
+    if get_value('i') != "Vide":
+        pygame.init() # ci variable pas vide !
+        pygame.mixer.init()
+
+        pygame.mixer.music.load(get_value('i'))
+        pygame.mixer.music.play(-1)
 
 def touche_entrer_j():
     os.system('clear')
     print("Tu as entré j")
     print(get_value('j'))
+    if get_value('j') != "Vide":
+        pygame.init() # ci variable pas vide !
+        pygame.mixer.init()
+
+        pygame.mixer.music.load(get_value('j'))
+        pygame.mixer.music.play(-1)
 
 def touche_entrer_k():
     os.system('clear')
     print("Tu as entré k")
     print(get_value('k'))
+    if get_value('k') != "Vide":
+        pygame.init() # ci variable pas vide !
+        pygame.mixer.init()
+
+        pygame.mixer.music.load(get_value('k'))
+        pygame.mixer.music.play(-1)
 
 def touche_entrer_l():
     os.system('clear')
     print("Tu as entré l")
     print(get_value('l'))
+    if get_value('l') != "Vide":
+        pygame.init() # ci variable pas vide !
+        pygame.mixer.init()
+
+        pygame.mixer.music.load(get_value('l'))
+        pygame.mixer.music.play(-1)
 
 def touche_entrer_m():
     os.system('clear')
     print("Tu as entré m")
     print(get_value('m'))
+    if get_value('m') != "Vide":
+        pygame.init() # ci variable pas vide !
+        pygame.mixer.init()
+
+        pygame.mixer.music.load(get_value('m'))
+        pygame.mixer.music.play(-1)
 
 def touche_entrer_n():
     os.system('clear')
     print("Tu as entré n")
     print(get_value('n'))
+    if get_value('n') != "Vide":
+        pygame.init() # ci variable pas vide !
+        pygame.mixer.init()
+
+        pygame.mixer.music.load(get_value('n'))
+        pygame.mixer.music.play(-1)
 
 def touche_entrer_o():
     os.system('clear')
     print("Tu as entré o")
     print(get_value('o'))
+    if get_value('o') != "Vide":
+        pygame.init() # ci variable pas vide !
+        pygame.mixer.init()
+
+        pygame.mixer.music.load(get_value('o'))
+        pygame.mixer.music.play(-1)
 
 def touche_entrer_p():
     os.system('clear')
     print("Tu as entré p")
     print(get_value('p'))
+    if get_value('p') != "Vide":
+        pygame.init() # ci variable pas vide !
+        pygame.mixer.init()
+
+        pygame.mixer.music.load(get_value('p'))
+        pygame.mixer.music.play(-1)
 
 def touche_entrer_q():
     os.system('clear')
     print("Tu as entré q")
     print(get_value('q'))
+    if get_value('q') != "Vide":
+        pygame.init() # ci variable pas vide !
+        pygame.mixer.init()
+
+        pygame.mixer.music.load(get_value('q'))
+        pygame.mixer.music.play(-1)
 
 def touche_entrer_r():
     os.system('clear')
     print("Tu as entré r")
     print(get_value('r'))
+    if get_value('r') != "Vide":
+        pygame.init() # ci variable pas vide !
+        pygame.mixer.init()
+
+        pygame.mixer.music.load(get_value('r'))
+        pygame.mixer.music.play(-1)
 
 def touche_entrer_s():
     os.system('clear')
     print("Tu as entré s")
     print(get_value('s'))
+    if get_value('s') != "Vide":
+        pygame.init() # ci variable pas vide !
+        pygame.mixer.init()
+
+        pygame.mixer.music.load(get_value('s'))
+        pygame.mixer.music.play(-1)
 
 def touche_entrer_t():
     os.system('clear')
     print("Tu as entré t")
     print(get_value('t'))
+    if get_value('t') != "Vide":
+        pygame.init() # ci variable pas vide !
+        pygame.mixer.init()
+
+        pygame.mixer.music.load(get_value('t'))
+        pygame.mixer.music.play(-1)
 
 def touche_entrer_u():
     os.system('clear')
     print("Tu as entré u")
     print(get_value('u'))
+    if get_value('u') != "Vide":
+        pygame.init() # ci variable pas vide !
+        pygame.mixer.init()
+
+        pygame.mixer.music.load(get_value('u'))
+        pygame.mixer.music.play(-1)
 
 def touche_entrer_v():
     os.system('clear')
     print("Tu as entré v")
     print(get_value('v'))
+    if get_value('v') != "Vide":
+        pygame.init() # ci variable pas vide !
+        pygame.mixer.init()
+
+        pygame.mixer.music.load(get_value('v'))
+        pygame.mixer.music.play(-1)
 
 def touche_entrer_w():
     os.system('clear')
     print("Tu as entré w")
     print(get_value('w'))
+    if get_value('w') != "Vide":
+        pygame.init() # ci variable pas vide !
+        pygame.mixer.init()
+
+        pygame.mixer.music.load(get_value('w'))
+        pygame.mixer.music.play(-1)
 
 def touche_entrer_x():
     os.system('clear')
     print("Tu as entré x")
     print(get_value('x'))
+    if get_value('x') != "Vide":
+        pygame.init() # ci variable pas vide !
+        pygame.mixer.init()
+
+        pygame.mixer.music.load(get_value('x'))
+        pygame.mixer.music.play(-1)
 
 def touche_entrer_y():
     os.system('clear')
     print("Tu as entré y")
     print(get_value('y'))
+    if get_value('y') != "Vide":
+        pygame.init() # ci variable pas vide !
+        pygame.mixer.init()
+
+        pygame.mixer.music.load(get_value('y'))
+        pygame.mixer.music.play(-1)
 
 def touche_entrer_z():
     os.system('clear')
     print("Tu as entré z")
     print(get_value('z'))
+    if get_value('z') != "Vide":
+        pygame.init() # ci variable pas vide !
+        pygame.mixer.init()
+
+        pygame.mixer.music.load(get_value('z'))
+        pygame.mixer.music.play(-1)
 
 def touche_entrer_0():
     global profile_globale
