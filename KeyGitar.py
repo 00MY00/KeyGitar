@@ -533,6 +533,7 @@ keyboard.add_hotkey("6", touche_entrer_6)
 keyboard.add_hotkey("7", touche_entrer_7)
 keyboard.add_hotkey("8", touche_entrer_8)
 keyboard.add_hotkey("9", touche_entrer_9)
+keyboard.add_hotkey(",", profiles_touche) # Creation de profile
 
 
 
