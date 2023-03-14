@@ -454,7 +454,7 @@ def touche_entrer_0():
     
     if os.path.isfile(filepath):
         profile = {}
-        with open(filename, 'r') as f:
+        with open(filepath, 'r') as f:
             # Lire le contenu du fichier et le stocker dans le dictionnaire 'profile'
             for line in f:
                 key, value = line.strip().split(',')
