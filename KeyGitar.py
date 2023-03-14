@@ -296,12 +296,15 @@ def profiles_touche():
 
         print("")
         print("Choisicer la touche sur la quelle ajouter un sond")
+        print("[xx] Pour quitée")
         print("DE a - z")
         print("")
 
 
         touche_profile_choisi = input(": ")
         touche_profile_choisi = str(touche_profile_choisi)
+        if touche_profile_choisi == "xx":
+            break
 
         # Vérification si la chaîne est composée d'un seul caractère alphabétique
         pattern = r'^[a-zA-Z]+$'
