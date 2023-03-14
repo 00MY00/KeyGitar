@@ -368,6 +368,11 @@ profile_globale = [
             ['m', "Vide"],   
             ]
 
+def get_value(key):
+    for elem in profile_globale:
+        if elem[0] == key:
+            return elem[1]
+    return None
 
 
 
@@ -375,7 +380,7 @@ profile_globale = [
 def touche_entrer_a():
     os.system('clear')
     print("Tu as entré a")
-    print(profile_globale['a'])
+    print(get_value('a'))
 
 def touche_entrer_b():
     os.system('clear')
