@@ -338,9 +338,8 @@ def profiles_touche():
 #----------------------------------------------
 ###############################################
 # Boucle While True 
-# Définition du tableau profile pour les touches
-profile = [
-            ['Letter', 'Value'],
+# Définition du tableau globale profile pour les touches
+profile_globale = [
             ['q', "Vide"],
             ['w', "Vide"],
             ['e', "Vide"],
@@ -515,7 +514,7 @@ def touche_entrer_0():
             # Lire le contenu du fichier et le stocker dans le dictionnaire 'profile'
             for line in f:
                 key, value = line.strip().split(',')
-                profile[key] = value
+                profile_globale[key] = value
             print("_________ CONTENU CSV")
             print(profile)
             print("_________")
