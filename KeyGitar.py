@@ -387,8 +387,8 @@ def touche_entrer_a():
         pygame.init() # ci variable pas vide !
         pygame.mixer.init()
 
-        pygame.mixer.music.load(get_value('a'))
-        pygame.mixer.music.play(-1)
+        sona = pygame.mixer.Sound(get_value('a'))
+        sona.play(-1)
 
 def touche_entrer_b():
     os.system('clear')
@@ -398,8 +398,8 @@ def touche_entrer_b():
         pygame.init() # ci variable pas vide !
         pygame.mixer.init()
 
-        pygame.mixer.music.load(get_value('b'))
-        pygame.mixer.music.play(-1)
+        sonb = pygame.mixer.Sound(get_value('b'))
+        sonb.play(-1)
 
 def touche_entrer_c():
     os.system('clear')
@@ -409,8 +409,8 @@ def touche_entrer_c():
         pygame.init() # ci variable pas vide !
         pygame.mixer.init()
 
-        pygame.mixer.music.load(get_value('c'))
-        pygame.mixer.music.play(-1)
+        sonc = pygame.mixer.Sound(get_value('c'))
+        sonc.play(-1)
 
 def touche_entrer_d():
     os.system('clear')
@@ -420,8 +420,8 @@ def touche_entrer_d():
         pygame.init() # ci variable pas vide !
         pygame.mixer.init()
 
-        pygame.mixer.music.load(get_value('d'))
-        pygame.mixer.music.play(-1)
+        sond = pygame.mixer.Sound(get_value('d'))
+        sond.play(-1)
 
 def touche_entrer_e():
     os.system('clear')
@@ -431,8 +431,8 @@ def touche_entrer_e():
         pygame.init() # ci variable pas vide !
         pygame.mixer.init()
 
-        pygame.mixer.music.load(get_value('e'))
-        pygame.mixer.music.play(-1)
+        sone = pygame.mixer.Sound(get_value('e'))
+        sone.play(-1)
 
 def touche_entrer_f():
     os.system('clear')
@@ -442,8 +442,8 @@ def touche_entrer_f():
         pygame.init() # ci variable pas vide !
         pygame.mixer.init()
 
-        pygame.mixer.music.load(get_value('f'))
-        pygame.mixer.music.play(-1)
+        sonf = pygame.mixer.Sound(get_value('f'))
+        sonf.play(-1)
 
 def touche_entrer_g():
     os.system('clear')
@@ -453,8 +453,8 @@ def touche_entrer_g():
         pygame.init() # ci variable pas vide !
         pygame.mixer.init()
 
-        pygame.mixer.music.load(get_value('g'))
-        pygame.mixer.music.play(-1)
+        song = pygame.mixer.Sound(get_value('g'))
+        song.play(-1)
 
 def touche_entrer_h():
     os.system('clear')
@@ -464,8 +464,8 @@ def touche_entrer_h():
         pygame.init() # ci variable pas vide !
         pygame.mixer.init()
 
-        pygame.mixer.music.load(get_value('h'))
-        pygame.mixer.music.play(-1)
+        sonh = pygame.mixer.Sound(get_value('h'))
+        sonh.play(-1)
 
 def touche_entrer_i():
     os.system('clear')
@@ -475,8 +475,8 @@ def touche_entrer_i():
         pygame.init() # ci variable pas vide !
         pygame.mixer.init()
 
-        pygame.mixer.music.load(get_value('i'))
-        pygame.mixer.music.play(-1)
+        soni = pygame.mixer.Sound(get_value('i'))
+        soni.play(-1)
 
 def touche_entrer_j():
     os.system('clear')
@@ -486,8 +486,8 @@ def touche_entrer_j():
         pygame.init() # ci variable pas vide !
         pygame.mixer.init()
 
-        pygame.mixer.music.load(get_value('j'))
-        pygame.mixer.music.play(-1)
+        sonj = pygame.mixer.Sound(get_value('j'))
+        sonj.play(-1)
 
 def touche_entrer_k():
     os.system('clear')
@@ -497,8 +497,8 @@ def touche_entrer_k():
         pygame.init() # ci variable pas vide !
         pygame.mixer.init()
 
-        pygame.mixer.music.load(get_value('k'))
-        pygame.mixer.music.play(-1)
+        sonk = pygame.mixer.Sound(get_value('k'))
+        sonk.play(-1)
 
 def touche_entrer_l():
     os.system('clear')
@@ -508,8 +508,8 @@ def touche_entrer_l():
         pygame.init() # ci variable pas vide !
         pygame.mixer.init()
 
-        pygame.mixer.music.load(get_value('l'))
-        pygame.mixer.music.play(-1)
+        sonl = pygame.mixer.Sound(get_value('l'))
+        sonl.play(-1)
 
 def touche_entrer_m():
     os.system('clear')
@@ -519,8 +519,8 @@ def touche_entrer_m():
         pygame.init() # ci variable pas vide !
         pygame.mixer.init()
 
-        pygame.mixer.music.load(get_value('m'))
-        pygame.mixer.music.play(-1)
+        sonm = pygame.mixer.Sound(get_value('m'))
+        sonm.play(-1)
 
 def touche_entrer_n():
     os.system('clear')
@@ -530,8 +530,8 @@ def touche_entrer_n():
         pygame.init() # ci variable pas vide !
         pygame.mixer.init()
 
-        pygame.mixer.music.load(get_value('n'))
-        pygame.mixer.music.play(-1)
+        sonn = pygame.mixer.Sound(get_value('n'))
+        sonn.play(-1)
 
 def touche_entrer_o():
     os.system('clear')
@@ -541,8 +541,8 @@ def touche_entrer_o():
         pygame.init() # ci variable pas vide !
         pygame.mixer.init()
 
-        pygame.mixer.music.load(get_value('o'))
-        pygame.mixer.music.play(-1)
+        sono = pygame.mixer.Sound(get_value('o'))
+        sono.play(-1)
 
 def touche_entrer_p():
     os.system('clear')
@@ -552,8 +552,8 @@ def touche_entrer_p():
         pygame.init() # ci variable pas vide !
         pygame.mixer.init()
 
-        pygame.mixer.music.load(get_value('p'))
-        pygame.mixer.music.play(-1)
+        sonp = pygame.mixer.Sound(get_value('p'))
+        sonp.play(-1)
 
 def touche_entrer_q():
     os.system('clear')
@@ -563,8 +563,8 @@ def touche_entrer_q():
         pygame.init() # ci variable pas vide !
         pygame.mixer.init()
 
-        pygame.mixer.music.load(get_value('q'))
-        pygame.mixer.music.play(-1)
+        sonq = pygame.mixer.Sound(get_value('q'))
+        sonq.play(-1)
 
 def touche_entrer_r():
     os.system('clear')
@@ -574,8 +574,8 @@ def touche_entrer_r():
         pygame.init() # ci variable pas vide !
         pygame.mixer.init()
 
-        pygame.mixer.music.load(get_value('r'))
-        pygame.mixer.music.play(-1)
+        sonr = pygame.mixer.Sound(get_value('r'))
+        sonr.play(-1)
 
 def touche_entrer_s():
     os.system('clear')
@@ -585,8 +585,8 @@ def touche_entrer_s():
         pygame.init() # ci variable pas vide !
         pygame.mixer.init()
 
-        pygame.mixer.music.load(get_value('s'))
-        pygame.mixer.music.play(-1)
+        sons = pygame.mixer.Sound(get_value('s'))
+        sons.play(-1)
 
 def touche_entrer_t():
     os.system('clear')
@@ -596,8 +596,8 @@ def touche_entrer_t():
         pygame.init() # ci variable pas vide !
         pygame.mixer.init()
 
-        pygame.mixer.music.load(get_value('t'))
-        pygame.mixer.music.play(-1)
+        sont = pygame.mixer.Sound(get_value('t'))
+        sont.play(-1)
 
 def touche_entrer_u():
     os.system('clear')
@@ -607,8 +607,8 @@ def touche_entrer_u():
         pygame.init() # ci variable pas vide !
         pygame.mixer.init()
 
-        pygame.mixer.music.load(get_value('u'))
-        pygame.mixer.music.play(-1)
+        sonu = pygame.mixer.Sound(get_value('u'))
+        sonu.play(-1)
 
 def touche_entrer_v():
     os.system('clear')
@@ -618,8 +618,8 @@ def touche_entrer_v():
         pygame.init() # ci variable pas vide !
         pygame.mixer.init()
 
-        pygame.mixer.music.load(get_value('v'))
-        pygame.mixer.music.play(-1)
+        sonv = pygame.mixer.Sound(get_value('v'))
+        sonv.play(-1)
 
 def touche_entrer_w():
     os.system('clear')
@@ -629,8 +629,8 @@ def touche_entrer_w():
         pygame.init() # ci variable pas vide !
         pygame.mixer.init()
 
-        pygame.mixer.music.load(get_value('w'))
-        pygame.mixer.music.play(-1)
+        sonw = pygame.mixer.Sound(get_value('w'))
+        sonw.play(-1)
 
 def touche_entrer_x():
     os.system('clear')
@@ -640,8 +640,8 @@ def touche_entrer_x():
         pygame.init() # ci variable pas vide !
         pygame.mixer.init()
 
-        pygame.mixer.music.load(get_value('x'))
-        pygame.mixer.music.play(-1)
+        sonx = pygame.mixer.Sound(get_value('x'))
+        sonx.play(-1)
 
 def touche_entrer_y():
     os.system('clear')
@@ -651,8 +651,8 @@ def touche_entrer_y():
         pygame.init() # ci variable pas vide !
         pygame.mixer.init()
 
-        pygame.mixer.music.load(get_value('y'))
-        pygame.mixer.music.play(-1)
+        sony = pygame.mixer.Sound(get_value('y'))
+        sony.play(-1)
 
 def touche_entrer_z():
     os.system('clear')
@@ -662,8 +662,8 @@ def touche_entrer_z():
         pygame.init() # ci variable pas vide !
         pygame.mixer.init()
 
-        pygame.mixer.music.load(get_value('z'))
-        pygame.mixer.music.play(-1)
+        sonz = pygame.mixer.Sound(get_value('z'))
+        sonz.play(-1)
 
 def touche_entrer_0():
     global profile_globale
