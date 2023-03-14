@@ -296,7 +296,7 @@ def profiles_touche():
 
         print("")
         print("Choisicer la touche sur la quelle ajouter un sond")
-        print("[xx] Pour quitée")
+        print("[xx] Pour quitée la première entrée est igniorée")
         print("DE a - z")
         print("")
 
@@ -450,8 +450,9 @@ def touche_entrer_0():
     os.system('clear')
     print("Tu as entré 0")
     filename = 'Profile_0.csv'
-    filename = "Profiles/" + filename
-    if os.path.isfile(filename):
+    filepath = os.path.join('Profiles', filename)
+    
+    if os.path.isfile(filepath):
         profile = {}
         with open(filename, 'r') as f:
             # Lire le contenu du fichier et le stocker dans le dictionnaire 'profile'
