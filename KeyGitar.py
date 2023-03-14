@@ -536,7 +536,7 @@ keyboard.add_hotkey("9", touche_entrer_9)
 
 
 
-keyboard.add_hotkey("-", lambda: keyboard.remove_hotkey("f5"))
+keyboard.add_hotkey("-", lambda: exit())
 
 # On écoute en permanence les touches du clavier
 while True:
