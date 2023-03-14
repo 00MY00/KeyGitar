@@ -375,132 +375,132 @@ profile_globale = [
 def touche_entrer_a():
     os.system('clear')
     print("Tu as entré a")
-    print(profile['a'])
+    print(profile_globale['a'])
 
 def touche_entrer_b():
     os.system('clear')
     print("Tu as entré b")
-    print(profile['b'])
+    print(profile_globale['b'])
 
 def touche_entrer_c():
     os.system('clear')
     print("Tu as entré c")
-    print(profile['c'])
+    print(profile_globale['c'])
 
 def touche_entrer_d():
     os.system('clear')
     print("Tu as entré d")
-    print(profile['d'])
+    print(profile_globale['d'])
 
 def touche_entrer_e():
     os.system('clear')
     print("Tu as entré e")
-    print(profile['e'])
+    print(profile_globale['e'])
 
 def touche_entrer_f():
     os.system('clear')
     print("Tu as entré f")
-    print(profile['f'])
+    print(profile_globale['f'])
 
 def touche_entrer_g():
     os.system('clear')
     print("Tu as entré g")
-    print(profile['g'])
+    print(profile_globale['g'])
 
 def touche_entrer_h():
     os.system('clear')
     print("Tu as entré h")
-    print(profile['h'])
+    print(profile_globale['h'])
 
 def touche_entrer_i():
     os.system('clear')
     print("Tu as entré i")
-    print(profile['i'])
+    print(profile_globale['i'])
 
 def touche_entrer_j():
     os.system('clear')
     print("Tu as entré j")
-    print(profile['j'])
+    print(profile_globale['j'])
 
 def touche_entrer_k():
     os.system('clear')
     print("Tu as entré k")
-    print(profile['k'])
+    print(profile_globale['k'])
 
 def touche_entrer_l():
     os.system('clear')
     print("Tu as entré l")
-    print(profile['l'])
+    print(profile_globale['l'])
 
 def touche_entrer_m():
     os.system('clear')
     print("Tu as entré m")
-    print(profile['m'])
+    print(profile_globale['m'])
 
 def touche_entrer_n():
     os.system('clear')
     print("Tu as entré n")
-    print(profile['n'])
+    print(profile_globale['n'])
 
 def touche_entrer_o():
     os.system('clear')
     print("Tu as entré o")
-    print(profile['o'])
+    print(profile_globale['o'])
 
 def touche_entrer_p():
     os.system('clear')
     print("Tu as entré p")
-    print(profile['p'])
+    print(profile_globale['p'])
 
 def touche_entrer_q():
     os.system('clear')
     print("Tu as entré q")
-    print(profile['q'])
+    print(profile_globale['q'])
 
 def touche_entrer_r():
     os.system('clear')
     print("Tu as entré r")
-    print(profile['r'])
+    print(profile_globale['r'])
 
 def touche_entrer_s():
     os.system('clear')
     print("Tu as entré s")
-    print(profile['s'])
+    print(profile_globale['s'])
 
 def touche_entrer_t():
     os.system('clear')
     print("Tu as entré t")
-    print(profile['t'])
+    print(profile_globale['t'])
 
 def touche_entrer_u():
     os.system('clear')
     print("Tu as entré u")
-    print(profile['u'])
+    print(profile_globale['u'])
 
 def touche_entrer_v():
     os.system('clear')
     print("Tu as entré v")
-    print(profile['v'])
+    print(profile_globale['v'])
 
 def touche_entrer_w():
     os.system('clear')
     print("Tu as entré w")
-    print(profile['w'])
+    print(profile_globale['w'])
 
 def touche_entrer_x():
     os.system('clear')
     print("Tu as entré x")
-    print(profile['x'])
+    print(profile_globale['x'])
 
 def touche_entrer_y():
     os.system('clear')
     print("Tu as entré y")
-    print(profile['y'])
+    print(profile_globale['y'])
 
 def touche_entrer_z():
     os.system('clear')
     print("Tu as entré z")
-    print(profile['z'])
+    print(profile_globale['z'])
 
 def touche_entrer_0():
     os.system('clear')
