@@ -384,6 +384,7 @@ def get_value(key): # Permet de récupérer le contenu de profile
 def touche_entrer_a():
     os.system('clear')
     if 'actf_a' not in locals():
+        global actf_a
         actf_a = 0
     print("Tu as entré a")
     print(get_value('a'))
@@ -402,6 +403,7 @@ def touche_entrer_a():
 def touche_entrer_b():
     os.system('clear')
     if 'actf_b' not in locals():
+        global actf_b
         actf_b = 0
     print("Tu as entré b")
     print(get_value('b'))
@@ -420,6 +422,7 @@ def touche_entrer_b():
 def touche_entrer_c():
     os.system('clear')
     if 'actf_c' not in locals():
+        global actf_c
         actf_c = 0
     print("Tu as entré c")
     print(get_value('c'))
@@ -438,6 +441,7 @@ def touche_entrer_c():
 def touche_entrer_d():
     os.system('clear')
     if 'actf_d' not in locals():
+        global actf_d
         actf_d = 0
     print("Tu as entré d")
     print(get_value('d'))
@@ -456,6 +460,7 @@ def touche_entrer_d():
 def touche_entrer_e():
     os.system('clear')
     if 'actf_e' not in locals():
+        global actf_e
         actf_e = 0
     print("Tu as entré e")
     print(get_value('e'))
@@ -474,6 +479,7 @@ def touche_entrer_e():
 def touche_entrer_f():
     os.system('clear')
     if 'actf_f' not in locals():
+        global actf_f
         actf_f = 0
     print("Tu as entré f")
     print(get_value('f'))
@@ -492,6 +498,7 @@ def touche_entrer_f():
 def touche_entrer_g():
     os.system('clear')
     if 'actf_g' not in locals():
+        global actf_g
         actf_g = 0
     print("Tu as entré g")
     print(get_value('g'))
@@ -510,6 +517,7 @@ def touche_entrer_g():
 def touche_entrer_h():
     os.system('clear')
     if 'actf_h' not in locals():
+        global actf_h
         actf_h = 0
     print("Tu as entré h")
     print(get_value('h'))
@@ -528,6 +536,7 @@ def touche_entrer_h():
 def touche_entrer_i():
     os.system('clear')
     if 'actf_i' not in locals():
+        global actf_i
         actf_i = 0
     print("Tu as entré i")
     print(get_value('i'))
@@ -546,6 +555,7 @@ def touche_entrer_i():
 def touche_entrer_j():
     os.system('clear')
     if 'actf_j' not in locals():
+        global actf_j
         actf_j = 0
     print("Tu as entré j")
     print(get_value('j'))
@@ -564,6 +574,7 @@ def touche_entrer_j():
 def touche_entrer_k():
     os.system('clear')
     if 'actf_k' not in locals():
+        global actf_k
         actf_k = 0
     print("Tu as entré k")
     print(get_value('k'))
@@ -582,6 +593,7 @@ def touche_entrer_k():
 def touche_entrer_l():
     os.system('clear')
     if 'actf_l' not in locals():
+        global actf_l
         actf_l = 0
     print("Tu as entré l")
     print(get_value('l'))
@@ -600,6 +612,7 @@ def touche_entrer_l():
 def touche_entrer_m():
     os.system('clear')
     if 'actf_m' not in locals():
+        global actf_m
         actf_m = 0
     print("Tu as entré m")
     print(get_value('m'))
@@ -618,6 +631,7 @@ def touche_entrer_m():
 def touche_entrer_n():
     os.system('clear')
     if 'actf_n' not in locals():
+        global actf_n
         actf_n = 0
     print("Tu as entré n")
     print(get_value('n'))
@@ -636,6 +650,7 @@ def touche_entrer_n():
 def touche_entrer_o():
     os.system('clear')
     if 'actf_o' not in locals():
+        global actf_o
         actf_o = 0
     print("Tu as entré o")
     print(get_value('o'))
@@ -654,6 +669,7 @@ def touche_entrer_o():
 def touche_entrer_p():
     os.system('clear')
     if 'actf_p' not in locals():
+        global actf_p
         actf_p = 0
     print("Tu as entré p")
     print(get_value('p'))
@@ -672,6 +688,7 @@ def touche_entrer_p():
 def touche_entrer_q():
     os.system('clear')
     if 'actf_q' not in locals():
+        global actf_q
         actf_q = 0
     print("Tu as entré q")
     print(get_value('q'))
@@ -690,6 +707,7 @@ def touche_entrer_q():
 def touche_entrer_r():
     os.system('clear')
     if 'actf_r' not in locals():
+        global actf_r
         actf_r = 0
     print("Tu as entré r")
     print(get_value('r'))
@@ -708,6 +726,7 @@ def touche_entrer_r():
 def touche_entrer_s():
     os.system('clear')
     if 'actf_s' not in locals():
+        global actf_s
         actf_s = 0
     print("Tu as entré s")
     print(get_value('s'))
@@ -726,6 +745,7 @@ def touche_entrer_s():
 def touche_entrer_t():
     os.system('clear')
     if 'actf_t' not in locals():
+        global actf_t
         actf_t = 0
     print("Tu as entré t")
     print(get_value('t'))
@@ -744,6 +764,7 @@ def touche_entrer_t():
 def touche_entrer_u():
     os.system('clear')
     if 'actf_u' not in locals():
+        global actf_u
         actf_u = 0
     print("Tu as entré u")
     print(get_value('u'))
@@ -762,6 +783,7 @@ def touche_entrer_u():
 def touche_entrer_v():
     os.system('clear')
     if 'actf_v' not in locals():
+        global actf_v
         actf_v = 0
     print("Tu as entré v")
     print(get_value('v'))
@@ -780,6 +802,7 @@ def touche_entrer_v():
 def touche_entrer_w():
     os.system('clear')
     if 'actf_w' not in locals():
+        global actf_w
         actf_w = 0
     print("Tu as entré w")
     print(get_value('w'))
@@ -798,6 +821,7 @@ def touche_entrer_w():
 def touche_entrer_x():
     os.system('clear')
     if 'actf_x' not in locals():
+        global actf_x
         actf_x = 0
     print("Tu as entré x")
     print(get_value('x'))
@@ -816,6 +840,7 @@ def touche_entrer_x():
 def touche_entrer_y():
     os.system('clear')
     if 'actf_y' not in locals():
+        global actf_y
         actf_y = 0
     print("Tu as entré y")
     print(get_value('y'))
@@ -834,6 +859,7 @@ def touche_entrer_y():
 def touche_entrer_z():
     os.system('clear')
     if 'actf_z' not in locals():
+        global actf_z
         actf_z = 0
     print("Tu as entré z")
     print(get_value('z'))
