@@ -55,7 +55,7 @@ echo "rsn_pairwise=CCMP" >> "/etc/hostapd/hostapd.conf"
 sudo sed -i 's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
 sudo sysctl net.ipv4.ip_forward=1
 
-sudo sed -i 's/nameserver 127\.0\.0\.53/nameserver 8.8.8.8/g' /etc/resolv.conf
+# ajouter dans '/etc/systemd/resolved.conf' DNS=8.8.8.8
 
 # Par-Feu
 #sudo apt install iptables -y
