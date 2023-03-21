@@ -52,6 +52,34 @@ Racine = os.getcwd()
 RepTemporaire = Racine + "/son/"
 RepTemporaireProfil = Racine + "/Profiles/"
 
+
+# Variable de base #
+actf_a = 0
+actf_b = 0
+actf_c = 0
+actf_d = 0
+actf_e = 0
+actf_f = 0
+actf_g = 0
+actf_h = 0
+actf_i = 0
+actf_j = 0
+actf_k = 0
+actf_l = 0
+actf_m = 0
+actf_n = 0
+actf_o = 0
+actf_p = 0
+actf_q = 0
+actf_r = 0
+actf_s = 0
+actf_t = 0
+actf_u = 0
+actf_v = 0
+actf_w = 0
+actf_x = 0
+actf_y = 0
+actf_z = 0
 ###############################################
 # Convertion des fichier audio en 'WAV'
 # Appel de fonction Example : 'convert_mp3_to_wav("/chemin/du/répertoire")'
@@ -393,6 +421,7 @@ def touche_entrer_a():
             actf_a = 1
         else:   # Stope le sont ci actiffe
             sona.stop()
+            actf_a = 0
 
 def touche_entrer_b():
     os.system('clear')
@@ -408,6 +437,7 @@ def touche_entrer_b():
             actf_b = 1
         else:   # Stope le sont ci actiffe
             sonb.stop()
+            actf_b = 0
 
 def touche_entrer_c():
     os.system('clear')
@@ -423,6 +453,7 @@ def touche_entrer_c():
             actf_c = 1
         else:   # Stope le sont ci actiffe
             sonc.stop()
+            actf_c = 0
 
 def touche_entrer_d():
     os.system('clear')
@@ -438,6 +469,7 @@ def touche_entrer_d():
             actf_d = 1
         else:   # Stope le sont ci actiffe
             sond.stop()
+            actf_d = 0
 
 def touche_entrer_e():
     os.system('clear')
@@ -453,6 +485,7 @@ def touche_entrer_e():
             actf_e = 1
         else:   # Stope le sont ci actiffe
             sone.stop()
+            actf_e = 0
 
 def touche_entrer_f():
     os.system('clear')
@@ -468,6 +501,7 @@ def touche_entrer_f():
             actf_f = 1
         else:   # Stope le sont ci actiffe
             sonf.stop()
+            actf_f = 0
 
 def touche_entrer_g():
     os.system('clear')
@@ -483,6 +517,7 @@ def touche_entrer_g():
             actf_g = 1
         else:   # Stope le sont ci actiffe
             song.stop()
+            actf_g = 0
 
 def touche_entrer_h():
     os.system('clear')
@@ -498,6 +533,7 @@ def touche_entrer_h():
             actf_h = 1
         else:   # Stope le sont ci actiffe
             sonh.stop()
+            actf_h = 0
 
 def touche_entrer_i():
     os.system('clear')
@@ -513,6 +549,7 @@ def touche_entrer_i():
             actf_i = 1
         else:   # Stope le sont ci actiffe
             soni.stop()
+            actf_i = 0
 
 def touche_entrer_j():
     os.system('clear')
@@ -528,6 +565,7 @@ def touche_entrer_j():
             actf_j = 1
         else:   # Stope le sont ci actiffe
             sonj.stop()
+            actf_j = 0
 
 def touche_entrer_k():
     os.system('clear')
@@ -543,6 +581,7 @@ def touche_entrer_k():
             actf_k = 1
         else:   # Stope le sont ci actiffe
             sonk.stop()
+            actf_k = 0
 
 def touche_entrer_l():
     os.system('clear')
@@ -558,6 +597,7 @@ def touche_entrer_l():
             actf_l = 1
         else:   # Stope le sont ci actiffe
             sonl.stop()
+            actf_l = 0
 
 def touche_entrer_m():
     os.system('clear')
@@ -573,6 +613,7 @@ def touche_entrer_m():
             actf_m = 1
         else:   # Stope le sont ci actiffe
             sonm.stop()
+            actf_m = 0
 
 def touche_entrer_n():
     os.system('clear')
@@ -588,6 +629,7 @@ def touche_entrer_n():
             actf_n = 1
         else:   # Stope le sont ci actiffe
             sonn.stop()
+            actf_n = 0
 
 def touche_entrer_o():
     os.system('clear')
@@ -603,6 +645,7 @@ def touche_entrer_o():
             actf_o = 1
         else:   # Stope le sont ci actiffe
             sono.stop()
+            actf_o = 0
 
 def touche_entrer_p():
     os.system('clear')
@@ -618,6 +661,7 @@ def touche_entrer_p():
             actf_p = 1
         else:   # Stope le sont ci actiffe
             sonp.stop()
+            actf_p = 0
 
 def touche_entrer_q():
     os.system('clear')
@@ -633,6 +677,7 @@ def touche_entrer_q():
             actf_q = 1
         else:   # Stope le sont ci actiffe
             sonq.stop()
+            actf_q = 0
 
 def touche_entrer_r():
     os.system('clear')
@@ -648,6 +693,7 @@ def touche_entrer_r():
             actf_r = 1
         else:   # Stope le sont ci actiffe
             sonr.stop()
+            actf_r = 0
 
 def touche_entrer_s():
     os.system('clear')
@@ -663,6 +709,7 @@ def touche_entrer_s():
             actf_s = 1
         else:   # Stope le sont ci actiffe
             sons.stop()
+            actf_s = 0
 
 def touche_entrer_t():
     os.system('clear')
@@ -678,6 +725,7 @@ def touche_entrer_t():
             actf_t = 1
         else:   # Stope le sont ci actiffe
             sont.stop()
+            actf_t = 0
 
 def touche_entrer_u():
     os.system('clear')
@@ -693,6 +741,7 @@ def touche_entrer_u():
             actf_u = 1
         else:   # Stope le sont ci actiffe
             sonu.stop()
+            actf_u = 0
 
 def touche_entrer_v():
     os.system('clear')
@@ -708,6 +757,7 @@ def touche_entrer_v():
             actf_v = 1
         else:   # Stope le sont ci actiffe
             sonv.stop()
+            actf_v = 0
 
 def touche_entrer_w():
     os.system('clear')
@@ -723,6 +773,7 @@ def touche_entrer_w():
             actf_w = 1
         else:   # Stope le sont ci actiffe
             sonw.stop()
+            actf_w = 0
 
 def touche_entrer_x():
     os.system('clear')
@@ -738,6 +789,7 @@ def touche_entrer_x():
             actf_x = 1
         else:   # Stope le sont ci actiffe
             sonx.stop()
+            actf_x = 0
 
 def touche_entrer_y():
     os.system('clear')
@@ -753,6 +805,7 @@ def touche_entrer_y():
             actf_y = 1
         else:   # Stope le sont ci actiffe
             sony.stop()
+            actf_y = 0
 
 def touche_entrer_z():
     os.system('clear')
@@ -768,6 +821,7 @@ def touche_entrer_z():
             actf_z = 1
         else:   # Stope le sont ci actiffe
             sonz.stop()
+            actf_z = 0
 
 
 

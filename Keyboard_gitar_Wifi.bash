@@ -2,88 +2,82 @@
 # Scripte de creation d'un reseau Wi-Fi
 # Inspirer par : https://wiki-fablab.grandbesancon.fr/doku.php?id=howto:raspberry-pi:wirelessaccespoint
 
-# Verification de l'accès internet
-ping www.google.ch -c 1
-
-if [ $? -eq 0 ];
-then
-    echo -e "OK ping réusit !"
-    sudo ifconfig eth0 down
+# Vérification de l'accès à Internet
+if ping -c 1 www.google.com >/dev/null; then
+  echo "OK, ping réussi !"
+  sudo ifconfig eth0 down
 fi
 
+# Mise à jour du système
 apt update -y 
-
-if [ $? -eq 0 ];
-then
-    echo -e "OK update réusit !"
+if [ $? -eq 0 ]; then
+  echo "OK, mise à jour réussie !"
 fi
 
 apt upgrade -y
-
-if [ $? -eq 0 ];
-then
-    echo -e "OK upgrade réusit !"
+if [ $? -eq 0 ]; then
+  echo "OK, upgrade réussi !"
 fi
 
 sudo ifconfig eth0 up
 
-
-
+# Configuration de l'interface wlan0
 echo "interface wlan0" > "/etc/dhcpcd.conf"
 echo "static ip_address=192.168.0.1/24" >> "/etc/dhcpcd.conf"
 echo "nohook wpa_supplicant" >> "/etc/dhcpcd.conf"
 
+# sudo apt install iptables -y
+
+# Activation du Wi-Fi
 sudo rfkill unblock 0
 
+# Installation de dnsmasq et de hostapd
+sudo apt-get install dnsmasq hostapd -y
 
-sudo apt-get install dnsmasq -y
-sudo apt-get install hostapd -y
-echo "######################################" > "/etc/dnsmasq.conf"
-######################################
-# changement dans le fichier de configuration "/etc/dnsmasq.conf" 
-echo "# On utilise l'interface wifi wlan0" >> "/etc/dnsmasq.conf"
-echo "interface=wlan0" >> "/etc/dnsmasq.conf"
-echo "#On définit une plage d'adresse ip ainsi que la durée du bail" >> "/etc/dnsmasq.conf"
-echo "dhcp-range=192.168.0.1,192.168.0.100,255.255.255.0,24h" >> "/etc/dnsmasq.conf"
+# Configuration de dnsmasq
+echo "interface=wlan0" > "/etc/dnsmasq.conf"
+echo "dhcp-range=192.168.0.2,192.168.0.200,255.255.255.0,24h" >> "/etc/dnsmasq.conf"
 
-
-######################################
-echo "######################################" > "/etc/hostapd/hostapd.conf"
-# Config de hostapd dans "/etc/hostapd/hostapd.conf"
-echo "# interface wlan du Wi-Fi" >> "/etc/hostapd/hostapd.conf"
-echo "interface=wlan0" >> "/etc/hostapd/hostapd.conf"
-
-echo "# nl80211 avec tous les drivers Linux mac80211" >> "/etc/hostapd/hostapd.conf" 
+# Configuration de hostapd
+echo "interface=wlan0" > "/etc/hostapd/hostapd.conf"
 echo "driver=nl80211" >> "/etc/hostapd/hostapd.conf"
-
-echo "# Nom du réseau Wi-Fi" >> "/etc/hostapd/hostapd.conf"
 echo "ssid=KeyboardGitar" >> "/etc/hostapd/hostapd.conf"
-
-echo "# mode Wi-Fi utilisé : a = IEEE 802.11a (5GHz) , b = IEEE 802.11b (2.4GHz), g = IEEE 802.11g) (2.4GHz)" >> "/etc/hostapd/hostapd.conf"
 echo "hw_mode=g" >> "/etc/hostapd/hostapd.conf"
-
-echo "# canal de fréquence Wi-Fi (1-14)" >> "/etc/hostapd/hostapd.conf"
 echo "channel=6" >> "/etc/hostapd/hostapd.conf"
-echo "###############################" >> "/etc/hostapd/hostapd.conf"
+echo "wpa=2" >> "/etc/hostapd/hostapd.conf"
+echo "wpa_passphrase=Keybord_1" >> "/etc/hostapd/hostapd.conf"
+echo "wpa_key_mgmt=WPA-PSK" >> "/etc/hostapd/hostapd.conf"
+echo "wpa_pairwise=CCMP" >> "/etc/hostapd/hostapd.conf"
+echo "rsn_pairwise=CCMP" >> "/etc/hostapd/hostapd.conf"
 
-#################################
+# Activation du routage
+# sed dans /etc/sysctl.conf #net.ipv4.ip_forward=1 par net.ipv4.ip_forward=1
+sudo sysctl net.ipv4.ip_forward=1
 
+# sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE  
+# sudo iptables -A FORWARD -i eth0 -o wlan0 -m state --state RELATED,ESTABLISHED -j ACCEPT
+# sudo iptables -A FORWARD -i wlan0 -o eth0 -j ACCEPT
+# sudo sh -c "iptables-save > /etc/iptables.ipv4.nat"
 
-# On indique à hostapd qu'il doit utiliser ce fichier de configuration en éditant le fichier /etc/default/hostapd afin qu'il contienne :
-DAEMON_CONF="/etc/hostapd/hostapd.conf"
+# Dans /etc/rc.local ajouter avant le exit 0 'iptables-restore < /etc/iptables.ipv4.nat '
 
-# On (re)démarre le serveur dhcp :
+# Autorisation Par-Feu
+sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 
-sudo systemctl restart dnsmasq
-# On active le service hostapd :
+# Configuration de systemd pour hostapd
+systemctl unmask hostapd
+systemctl enable hostapd
 
-sudo systemctl unmask hostapd
-sudo systemctl enable hostapd
-sudo systemctl start hostapd
+# Redémarrage de hostapd
+systemctl restart hostapd
 
-
-# Afficher Logs
+# Affichage des logs système
 cat /var/log/syslog
+
+# Désactiver iptables
+systemctl stop iptables
+systemctl disable iptables
+ufw disable
 
 exit
 ###################################################################################################################
@@ -105,4 +99,15 @@ client_socket.send(b"set_color 255 0 0")
 client_socket.close()
 Ce code suppose que votre bande LED est configurée pour accepter des connexions socket et que vous connaissez le protocole de communication utilisé. Assurez-vous de consulter la documentation du dispositif pour savoir comment il peut être contrôlé via un socket.
 
+MDP
+wpa=2
+#wpa_psk=0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
+wpa_passphrase=passphrase
+wpa_key_mgmt=WPA-PSK
+wpa_pairwise=CCMP
+rsn_pairwise=CCMP
+
+
+# Afficher les logs DNSMASQ
+sudo tail -f /var/log/syslog | grep dnsmasq
 
