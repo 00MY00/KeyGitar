@@ -53,33 +53,7 @@ RepTemporaire = Racine + "/son/"
 RepTemporaireProfil = Racine + "/Profiles/"
 
 
-# Variable de base #
-actf_a = 0
-actf_b = 0
-actf_c = 0
-actf_d = 0
-actf_e = 0
-actf_f = 0
-actf_g = 0
-actf_h = 0
-actf_i = 0
-actf_j = 0
-actf_k = 0
-actf_l = 0
-actf_m = 0
-actf_n = 0
-actf_o = 0
-actf_p = 0
-actf_q = 0
-actf_r = 0
-actf_s = 0
-actf_t = 0
-actf_u = 0
-actf_v = 0
-actf_w = 0
-actf_x = 0
-actf_y = 0
-actf_z = 0
+
 ###############################################
 # Convertion des fichier audio en 'WAV'
 # Appel de fonction Example : 'convert_mp3_to_wav("/chemin/du/répertoire")'
@@ -409,6 +383,8 @@ def get_value(key): # Permet de récupérer le contenu de profile
 
 def touche_entrer_a():
     os.system('clear')
+    if 'actf_a' not in locals():
+        actf_a = 0
     print("Tu as entré a")
     print(get_value('a'))
     if get_value('a') != "Vide":
@@ -425,6 +401,8 @@ def touche_entrer_a():
 
 def touche_entrer_b():
     os.system('clear')
+    if 'actf_b' not in locals():
+        actf_b = 0
     print("Tu as entré b")
     print(get_value('b'))
     if get_value('b') != "Vide":
@@ -441,6 +419,8 @@ def touche_entrer_b():
 
 def touche_entrer_c():
     os.system('clear')
+    if 'actf_c' not in locals():
+        actf_c = 0
     print("Tu as entré c")
     print(get_value('c'))
     if get_value('c') != "Vide":
@@ -457,6 +437,8 @@ def touche_entrer_c():
 
 def touche_entrer_d():
     os.system('clear')
+    if 'actf_d' not in locals():
+        actf_d = 0
     print("Tu as entré d")
     print(get_value('d'))
     if get_value('d') != "Vide":
@@ -473,6 +455,8 @@ def touche_entrer_d():
 
 def touche_entrer_e():
     os.system('clear')
+    if 'actf_e' not in locals():
+        actf_e = 0
     print("Tu as entré e")
     print(get_value('e'))
     if get_value('e') != "Vide":
@@ -489,6 +473,8 @@ def touche_entrer_e():
 
 def touche_entrer_f():
     os.system('clear')
+    if 'actf_f' not in locals():
+        actf_f = 0
     print("Tu as entré f")
     print(get_value('f'))
     if get_value('f') != "Vide":
@@ -505,6 +491,8 @@ def touche_entrer_f():
 
 def touche_entrer_g():
     os.system('clear')
+    if 'actf_g' not in locals():
+        actf_g = 0
     print("Tu as entré g")
     print(get_value('g'))
     if get_value('g') != "Vide":
@@ -521,6 +509,8 @@ def touche_entrer_g():
 
 def touche_entrer_h():
     os.system('clear')
+    if 'actf_h' not in locals():
+        actf_h = 0
     print("Tu as entré h")
     print(get_value('h'))
     if get_value('h') != "Vide":
@@ -537,6 +527,8 @@ def touche_entrer_h():
 
 def touche_entrer_i():
     os.system('clear')
+    if 'actf_i' not in locals():
+        actf_i = 0
     print("Tu as entré i")
     print(get_value('i'))
     if get_value('i') != "Vide":
@@ -553,6 +545,8 @@ def touche_entrer_i():
 
 def touche_entrer_j():
     os.system('clear')
+    if 'actf_j' not in locals():
+        actf_j = 0
     print("Tu as entré j")
     print(get_value('j'))
     if get_value('j') != "Vide":
@@ -569,6 +563,8 @@ def touche_entrer_j():
 
 def touche_entrer_k():
     os.system('clear')
+    if 'actf_k' not in locals():
+        actf_k = 0
     print("Tu as entré k")
     print(get_value('k'))
     if get_value('k') != "Vide":
@@ -585,6 +581,8 @@ def touche_entrer_k():
 
 def touche_entrer_l():
     os.system('clear')
+    if 'actf_l' not in locals():
+        actf_l = 0
     print("Tu as entré l")
     print(get_value('l'))
     if get_value('l') != "Vide":
@@ -601,6 +599,8 @@ def touche_entrer_l():
 
 def touche_entrer_m():
     os.system('clear')
+    if 'actf_m' not in locals():
+        actf_m = 0
     print("Tu as entré m")
     print(get_value('m'))
     if get_value('m') != "Vide":
@@ -617,6 +617,8 @@ def touche_entrer_m():
 
 def touche_entrer_n():
     os.system('clear')
+    if 'actf_n' not in locals():
+        actf_n = 0
     print("Tu as entré n")
     print(get_value('n'))
     if get_value('n') != "Vide":
@@ -633,6 +635,8 @@ def touche_entrer_n():
 
 def touche_entrer_o():
     os.system('clear')
+    if 'actf_o' not in locals():
+        actf_o = 0
     print("Tu as entré o")
     print(get_value('o'))
     if get_value('o') != "Vide":
@@ -649,6 +653,8 @@ def touche_entrer_o():
 
 def touche_entrer_p():
     os.system('clear')
+    if 'actf_p' not in locals():
+        actf_p = 0
     print("Tu as entré p")
     print(get_value('p'))
     if get_value('p') != "Vide":
@@ -665,6 +671,8 @@ def touche_entrer_p():
 
 def touche_entrer_q():
     os.system('clear')
+    if 'actf_q' not in locals():
+        actf_q = 0
     print("Tu as entré q")
     print(get_value('q'))
     if get_value('q') != "Vide":
@@ -681,6 +689,8 @@ def touche_entrer_q():
 
 def touche_entrer_r():
     os.system('clear')
+    if 'actf_r' not in locals():
+        actf_r = 0
     print("Tu as entré r")
     print(get_value('r'))
     if get_value('r') != "Vide":
@@ -697,6 +707,8 @@ def touche_entrer_r():
 
 def touche_entrer_s():
     os.system('clear')
+    if 'actf_s' not in locals():
+        actf_s = 0
     print("Tu as entré s")
     print(get_value('s'))
     if get_value('s') != "Vide":
@@ -713,6 +725,8 @@ def touche_entrer_s():
 
 def touche_entrer_t():
     os.system('clear')
+    if 'actf_t' not in locals():
+        actf_t = 0
     print("Tu as entré t")
     print(get_value('t'))
     if get_value('t') != "Vide":
@@ -729,6 +743,8 @@ def touche_entrer_t():
 
 def touche_entrer_u():
     os.system('clear')
+    if 'actf_u' not in locals():
+        actf_u = 0
     print("Tu as entré u")
     print(get_value('u'))
     if get_value('u') != "Vide":
@@ -745,6 +761,8 @@ def touche_entrer_u():
 
 def touche_entrer_v():
     os.system('clear')
+    if 'actf_v' not in locals():
+        actf_v = 0
     print("Tu as entré v")
     print(get_value('v'))
     if get_value('v') != "Vide":
@@ -761,6 +779,8 @@ def touche_entrer_v():
 
 def touche_entrer_w():
     os.system('clear')
+    if 'actf_w' not in locals():
+        actf_w = 0
     print("Tu as entré w")
     print(get_value('w'))
     if get_value('w') != "Vide":
@@ -777,6 +797,8 @@ def touche_entrer_w():
 
 def touche_entrer_x():
     os.system('clear')
+    if 'actf_x' not in locals():
+        actf_x = 0
     print("Tu as entré x")
     print(get_value('x'))
     if get_value('x') != "Vide":
@@ -793,6 +815,8 @@ def touche_entrer_x():
 
 def touche_entrer_y():
     os.system('clear')
+    if 'actf_y' not in locals():
+        actf_y = 0
     print("Tu as entré y")
     print(get_value('y'))
     if get_value('y') != "Vide":
@@ -809,6 +833,8 @@ def touche_entrer_y():
 
 def touche_entrer_z():
     os.system('clear')
+    if 'actf_z' not in locals():
+        actf_z = 0
     print("Tu as entré z")
     print(get_value('z'))
     if get_value('z') != "Vide":
