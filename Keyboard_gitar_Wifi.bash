@@ -5,7 +5,9 @@
 # Vérification de l'accès à Internet
 if ping -c 1 www.google.com >/dev/null; then
   echo "OK, ping réussi !"
-  sudo ifconfig eth0 down
+  # probablement ici problème !!!
+  apt install net-tools -y
+  #sudo ifconfig eth0 down
 fi
 
 # Mise à jour du système
@@ -25,8 +27,6 @@ sudo ifconfig eth0 up
 echo "interface wlan0" > "/etc/dhcpcd.conf"
 echo "static ip_address=192.168.0.1/24" >> "/etc/dhcpcd.conf"
 echo "nohook wpa_supplicant" >> "/etc/dhcpcd.conf"
-
-# sudo apt install iptables -y
 
 # Activation du Wi-Fi
 sudo rfkill unblock 0
@@ -50,19 +50,24 @@ echo "wpa_key_mgmt=WPA-PSK" >> "/etc/hostapd/hostapd.conf"
 echo "wpa_pairwise=CCMP" >> "/etc/hostapd/hostapd.conf"
 echo "rsn_pairwise=CCMP" >> "/etc/hostapd/hostapd.conf"
 
+
 # Activation du routage
-# sed dans /etc/sysctl.conf #net.ipv4.ip_forward=1 par net.ipv4.ip_forward=1
+sudo sed -i 's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
 sudo sysctl net.ipv4.ip_forward=1
 
-# sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE  
-# sudo iptables -A FORWARD -i eth0 -o wlan0 -m state --state RELATED,ESTABLISHED -j ACCEPT
-# sudo iptables -A FORWARD -i wlan0 -o eth0 -j ACCEPT
-# sudo sh -c "iptables-save > /etc/iptables.ipv4.nat"
+sudo sed -i 's/nameserver 127\.0\.0\.53/nameserver 8.8.8.8/g' /etc/resolv.conf
+
+# Par-Feu
+#sudo apt install iptables -y
+#sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE  
+#sudo iptables -A FORWARD -i eth0 -o wlan0 -m state --state RELATED,ESTABLISHED -j ACCEPT
+#sudo iptables -A FORWARD -i wlan0 -o eth0 -j ACCEPT
+#sudo sh -c "iptables-save > /etc/iptables.ipv4.nat"
 
 # Dans /etc/rc.local ajouter avant le exit 0 'iptables-restore < /etc/iptables.ipv4.nat '
 
 # Autorisation Par-Feu
-sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+#sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 
 # Configuration de systemd pour hostapd
 systemctl unmask hostapd
